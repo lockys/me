@@ -14,6 +14,7 @@ var concat = require('gulp-concat');
   Call this task indepedently Using 'gulp js'
 **/
 gulp.task('js', function() {
+  gulp.watch('./src/js/*.js', ['js']);
   return gulp.src('./src/js/*.js')
     .pipe(concat('build.js'))
     .pipe(rename({ suffix: '.min' }))
