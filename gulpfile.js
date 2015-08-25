@@ -10,6 +10,9 @@ var notify = require('gulp-notify');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 
+/**
+  Call this task indepedently Using 'gulp js'
+**/
 gulp.task('js', function() {
   return gulp.src('./src/js/*.js')
     .pipe(concat('build.js'))
@@ -39,4 +42,7 @@ gulp.task('clean', function(cb) {
   del(['./dist/assets'], cb);
 });
 
+/**
+  default task by 'gulp' and do less -> image -> js task
+**/
 gulp.task('default', ['less', 'image', 'js']);
