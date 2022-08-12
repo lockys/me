@@ -34,7 +34,7 @@ const Exp = () => {
                 </ExpContext>
             </ExpContext>
         </ExpRow>
-        <SCTitle>working experiences</SCTitle>
+        <SCTitle>work experiences</SCTitle>
         <ExpRow>
             <SCRoundImage
                 src="https://media-exp1.licdn.com/dms/image/C4D0BAQEaBXOgNiu3sg/company-logo_100_100/0/1531757731989?e=1667433600&v=beta&t=3kqC6Mn06KyOf_GUf-Y-sVNf-h77DcsMG0iK77DlTag"/>

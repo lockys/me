@@ -11,7 +11,10 @@ import Note from './components/Note';
 
 const PortfolioContainer = styled.div`
   max-width: 768px;
-  margin: 2rem auto;
+  margin: 1rem auto;
+  align-items: center;
+  border: 1px dotted grey;
+  border-radius: 5px;
   @media (max-width: 768px) {
     margin: 0;
   }
@@ -25,6 +28,7 @@ const SCTitle = styled(SCHeader)`
   text-align: center;
   padding: .5rem;
   cursor: pointer;
+  border-radius: 5px 5px 0 0;
 
   &:hover {
     border: 1rem solid black;
@@ -48,7 +52,7 @@ const ContentSection = styled.section`
 `
 const Footer = styled.footer`
   margin: 1rem;
-  border-top: 2px dotted lightgray;
+  border-top: 1px dotted grey;
   padding-top: 1rem;
   font-weight: bold;
 `
@@ -92,7 +96,7 @@ function Portfolio() {
     return (
         <PortfolioContainer>
             <Header>
-                <SCTitle>calvinjeng</SCTitle>
+                <SCTitle>calvinjeng.</SCTitle>
             </Header>
             <Navigation/>
             <ContentSection>
@@ -103,7 +107,7 @@ function Portfolio() {
                 </Routes>
             </ContentSection>
             <SCTimeSection>
-                <FiClock/>My timezone: UTC+8 = {calcTime('Taipei', '+8')}
+                <FiClock/>My Timezone: UTC+8 === {calcTime('Taipei', '+8')} now.
             </SCTimeSection>
             <Footer>
                 <SCFooterLink href="https://github.com/lockys" target="_blank">

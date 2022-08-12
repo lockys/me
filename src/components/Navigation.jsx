@@ -4,15 +4,15 @@ import {Link} from "react-router-dom";
 
 const links = [
     {
-        text: '👋intro',
+        text: '👋INTRO',
         path: '/'
     },
     {
-        text: '💼experiences',
+        text: '💼EXPERIENCES',
         path: '/exp'
     },
     {
-        text: '📒note',
+        text: '📒NOTE',
         path: '/note'
     }
 ]
@@ -30,7 +30,7 @@ const SCNavLink = styled(Link)`
   font-weight: bolder;
 
   &:not(:last-child):after {
-    content: ' - ';
+    content: ' ··· ';
     cursor: default;
   }
 
