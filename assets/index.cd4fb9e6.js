@@ -83,7 +83,7 @@ Error generating stack: `+o.message+`
 `,ml=ge.img`
   width: 4rem;
   border-radius: 50px;
-`,J0=[{text:"\u{1F44B}intro",path:"/"},{text:"\u{1F4BC}experiences",path:"/exp"},{text:"\u{1F4D2}note",path:"/note"}],q0=ge.nav`
+`,J0=[{text:"\u{1F44B}INTRO",path:"/"},{text:"\u{1F4BC}EXPERIENCES",path:"/exp"},{text:"\u{1F4D2}NOTE",path:"/note"}],q0=ge.nav`
   margin: 1rem;
   @media (max-width: 320px) {
     width: fit-content;
@@ -95,7 +95,7 @@ Error generating stack: `+o.message+`
   font-weight: bolder;
 
   &:not(:last-child):after {
-    content: ' - ';
+    content: ' ··· ';
     cursor: default;
   }
 
@@ -114,9 +114,9 @@ Error generating stack: `+o.message+`
 `,nv=ge.img`
   width: 33%;
   border: .3rem solid #eee;
-  box-shadow: rgba(0, 0, 0, .30) 0 2px 3px;
   filter: grayscale(100%);
   transition: filter .3s ease-in-out;
+  border-radius: 0 0 0 5px;
 
   &:hover {
     filter: none;
@@ -129,16 +129,16 @@ Error generating stack: `+o.message+`
   font-weight: lighter;
   border: .3rem solid #eee;
   color: #f9f9f9;
-  background-color: #0093E9;
-  background-image: linear-gradient(288deg, #0093E9 0%, #80D0C7 100%);
-  box-shadow: rgba(0, 0, 0, .30) 0 2px 3px;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #08AEEA 0%, #9599E2 100%);
+  border-radius: 0 0 5px 0;
 
   flex: 1;
   padding: 1rem;
   line-height: 1.5rem;
   font-size: .8rem;
   hyphens: auto;
-`,lv=()=>se(tv,{children:[A(nv,{src:"https://avatars.githubusercontent.com/u/3911469?v=4"}),se(rv,{children:["Hello world! This is Calvin Hao-Wei Jeng, a software developer based in Taiwan.",A("br",{}),A("br",{}),"- I currently work for DBS Bank as a front-end developer. ",A("br",{}),"- I write some JavaScript, CSS and HTML. ",A("br",{}),A("br",{})," In the mean time I got my BS and MS degree in Computer Science from National Tsing Hua university."]})]}),sr=ge.div`
+`,lv=()=>se(tv,{children:[A(nv,{src:"https://avatars.githubusercontent.com/u/3911469?v=4"}),se(rv,{children:["Hello world! This is Calvin Hao-Wei Jeng, a software developer based in Taiwan.",A("br",{}),A("br",{}),"- I currently work for DBS Bank as a front-end developer. ",A("br",{}),"- I write some JavaScript, CSS and HTML. ",A("br",{}),A("br",{})," I got my BS and MS degree in Computer Science from National Tsing Hua university."]})]}),sr=ge.div`
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -148,9 +148,12 @@ Error generating stack: `+o.message+`
   line-height: 1.2rem;
 `,xn=ge.h4`
   font-weight: bolder;
-`,ov=()=>se("div",{children:[A(Si,{children:"skills"}),A(sr,{children:se(ut,{children:[A(xn,{children:"Technical skills"}),A(ut,{children:"JavaScript, React.js, CSS, HTML"}),A(xn,{children:"Languages"}),A(ut,{children:"Chinese(Native), English(Fair)"})]})}),A(Si,{children:"working experiences"}),se(sr,{children:[A(ml,{src:"https://media-exp1.licdn.com/dms/image/C4D0BAQEaBXOgNiu3sg/company-logo_100_100/0/1531757731989?e=1667433600&v=beta&t=3kqC6Mn06KyOf_GUf-Y-sVNf-h77DcsMG0iK77DlTag"}),se(ut,{children:[A(xn,{children:"DBS Bank."}),se(ut,{children:["Front-end developer, 2021/5 - PRESET, Taipei",A("br",{}),"Develop features for the Taiwan DBS internet banking website."]})]})]}),se(sr,{children:[A(ml,{src:"https://media-exp1.licdn.com/dms/image/C4E0BAQFoH9k8ssM14Q/company-logo_100_100/0/1562340511062?e=1667433600&v=beta&t=CYxfc97wi2hQ9QAPoyDlT2lLYcb7uvbF-1YD71O_zZY"}),se(ut,{children:[A(xn,{children:"Garmin corp."}),se(ut,{children:["Software engineer, 2016/11 - 2020/5, New Taipei",A("br",{}),"mostly focus on implementations of back-end system"]})]})]}),A(Si,{children:"education"}),se(sr,{children:[A(ml,{src:"https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo"}),se(ut,{children:[A(xn,{children:"National Tsing Hua university"}),A(ut,{children:"MS, 2014 - 2016, Hsinchu"})]})]}),se(sr,{children:[A(ml,{src:"https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo"}),se(ut,{children:[A(xn,{children:"National Tsing Hua university"}),A(ut,{children:"BS, 2010 - 2014, Hsinchu"})]})]})]}),iv=()=>se("div",{children:["0 notes for now. ",A("br",{}),A("br",{}),A("img",{width:"100%",src:"https://media3.giphy.com/media/11ikeVaUfcXLWM/giphy.gif"})]}),uv=ge.div`
+`,ov=()=>se("div",{children:[A(Si,{children:"skills"}),A(sr,{children:se(ut,{children:[A(xn,{children:"Technical skills"}),A(ut,{children:"JavaScript, React.js, CSS, HTML"}),A(xn,{children:"Languages"}),A(ut,{children:"Chinese(Native), English(Fair)"})]})}),A(Si,{children:"work experiences"}),se(sr,{children:[A(ml,{src:"https://media-exp1.licdn.com/dms/image/C4D0BAQEaBXOgNiu3sg/company-logo_100_100/0/1531757731989?e=1667433600&v=beta&t=3kqC6Mn06KyOf_GUf-Y-sVNf-h77DcsMG0iK77DlTag"}),se(ut,{children:[A(xn,{children:"DBS Bank."}),se(ut,{children:["Front-end developer, 2021/5 - PRESET, Taipei",A("br",{}),"Develop features for the Taiwan DBS internet banking website."]})]})]}),se(sr,{children:[A(ml,{src:"https://media-exp1.licdn.com/dms/image/C4E0BAQFoH9k8ssM14Q/company-logo_100_100/0/1562340511062?e=1667433600&v=beta&t=CYxfc97wi2hQ9QAPoyDlT2lLYcb7uvbF-1YD71O_zZY"}),se(ut,{children:[A(xn,{children:"Garmin corp."}),se(ut,{children:["Software engineer, 2016/11 - 2020/5, New Taipei",A("br",{}),"mostly focus on implementations of back-end system"]})]})]}),A(Si,{children:"education"}),se(sr,{children:[A(ml,{src:"https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo"}),se(ut,{children:[A(xn,{children:"National Tsing Hua university"}),A(ut,{children:"MS, 2014 - 2016, Hsinchu"})]})]}),se(sr,{children:[A(ml,{src:"https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo"}),se(ut,{children:[A(xn,{children:"National Tsing Hua university"}),A(ut,{children:"BS, 2010 - 2014, Hsinchu"})]})]})]}),iv=()=>se("div",{children:["0 notes for now. ",A("br",{}),A("br",{}),A("img",{width:"100%",src:"https://media3.giphy.com/media/11ikeVaUfcXLWM/giphy.gif"})]}),uv=ge.div`
   max-width: 768px;
-  margin: 2rem auto;
+  margin: 1rem auto;
+  align-items: center;
+  border: 1px dotted grey;
+  border-radius: 5px;
   @media (max-width: 768px) {
     margin: 0;
   }
@@ -162,6 +165,7 @@ Error generating stack: `+o.message+`
   text-align: center;
   padding: .5rem;
   cursor: pointer;
+  border-radius: 5px 5px 0 0;
 
   &:hover {
     border: 1rem solid black;
@@ -182,7 +186,7 @@ Error generating stack: `+o.message+`
   }
 `,fv=ge.footer`
   margin: 1rem;
-  border-top: 2px dotted lightgray;
+  border-top: 1px dotted grey;
   padding-top: 1rem;
   font-weight: bold;
 `,ki=ge.a`
@@ -207,7 +211,7 @@ Error generating stack: `+o.message+`
   font-size: .9rem;
   gap: .5rem;
   margin: 1rem;
-`;function hv(){return se(uv,{children:[A(sv,{children:A(av,{children:"calvinjeng"})}),A(ev,{}),A(cv,{children:se(R0,{children:[A(zl,{exact:!0,path:"/",element:A(lv,{})}),A(zl,{path:"/exp",element:A(ov,{})}),A(zl,{path:"/note",element:A(iv,{})})]})}),se(pv,{children:[A(Y0,{}),"My timezone: UTC+8 = ",((t,n)=>{let r=new Date,l=r.getTime()+r.getTimezoneOffset()*6e4,o=new Date(l+36e5*n);return`${o.getHours()}:${o.getMinutes().toLocaleString("en-US",{minimumIntegerDigits:2,useGrouping:!1})}`})("Taipei","+8")]}),se(fv,{children:[A(ki,{href:"https://github.com/lockys",target:"_blank",children:A(G0,{})}),A(ki,{href:"https://www.linkedin.com/in/calvinjeng/",target:"_blank",children:A(K0,{})}),A(ki,{href:"mailto:lockys.tw@gmail.com",target:"_blank",children:A(X0,{})}),se(dv,{children:["\xA9 ",new Date().getFullYear()," Calvin Hao-Wei Jeng"]})]})]})}var Ud=globalThis&&globalThis.__makeTemplateObject||function(e,t){return Object.defineProperty?Object.defineProperty(e,"raw",{value:t}):e.raw=t,e},Hd=Na(lc||(lc=Ud([`
+`;function hv(){return se(uv,{children:[A(sv,{children:A(av,{children:"calvinjeng."})}),A(ev,{}),A(cv,{children:se(R0,{children:[A(zl,{exact:!0,path:"/",element:A(lv,{})}),A(zl,{path:"/exp",element:A(ov,{})}),A(zl,{path:"/note",element:A(iv,{})})]})}),se(pv,{children:[A(Y0,{}),"My Timezone: UTC+8 === ",((t,n)=>{let r=new Date,l=r.getTime()+r.getTimezoneOffset()*6e4,o=new Date(l+36e5*n);return`${o.getHours()}:${o.getMinutes().toLocaleString("en-US",{minimumIntegerDigits:2,useGrouping:!1})}`})("Taipei","+8")," now."]}),se(fv,{children:[A(ki,{href:"https://github.com/lockys",target:"_blank",children:A(G0,{})}),A(ki,{href:"https://www.linkedin.com/in/calvinjeng/",target:"_blank",children:A(K0,{})}),A(ki,{href:"mailto:lockys.tw@gmail.com",target:"_blank",children:A(X0,{})}),se(dv,{children:["\xA9 ",new Date().getFullYear()," Calvin Hao-Wei Jeng"]})]})]})}var Ud=globalThis&&globalThis.__makeTemplateObject||function(e,t){return Object.defineProperty?Object.defineProperty(e,"raw",{value:t}):e.raw=t,e},Hd=Na(lc||(lc=Ud([`
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.1 | 20191019
    License: none (public domain)
