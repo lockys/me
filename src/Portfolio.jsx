@@ -162,7 +162,7 @@ function Portfolio() {
     return (
         <PortfolioContainer>
             <Header>
-                <SCTitle>Calvin Jeng</SCTitle>
+                <SCTitle>calvinjeng.</SCTitle>
             </Header>
             <Navigation/>
             <ContentSection>
