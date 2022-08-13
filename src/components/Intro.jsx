@@ -52,10 +52,10 @@ const Intro = () => {
                           }}
             />
             <IntroContent>
-                Hello world! This is Calvin Hao-Wei Jeng, a software developer based in Taiwan.<br/><br/>
-                -> I currently work for DBS Bank as a front-end developer. <br/>
+                Hello world! This is <u>Calvin Hao-Wei Jeng</u>, a software developer based in Taiwan.<br/><br/>
+                -> I currently work for <u>DBS Bank</u> as a front-end developer. <br/>
                 -> I write some JavaScript, CSS and HTML. <br/><br/> I got my BS
-                and MS degree in Computer Science from National Tsing Hua university.
+                and MS degree in <u>Computer Science</u> from National Tsing Hua university.
             </IntroContent>
         </IntroContainer>
     )
