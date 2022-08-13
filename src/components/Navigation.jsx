@@ -1,57 +1,82 @@
 import React from 'react'
 import styled from 'styled-components';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import wingSpritePath from '../assets/wing-sprite.png'
 
 const links = [
     {
-        text: '👋INTRO',
+        text: '👋INTRO.',
         path: '/'
     },
     {
-        text: '💼EXPERIENCES',
+        text: '💻EXPERIENCES.',
         path: '/exp'
     },
     {
-        text: '📒NOTE',
+        text: '📒NOTE.',
         path: '/note'
     }
 ]
 
 const SCNavigationContainer = styled.nav`
-  margin: 1rem;
-  @media (max-width: 320px) {
-    width: fit-content;
-    margin: 1rem auto;
+  margin: 1rem auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  @media (max-width: 425px) {
+    flex-direction: column;
   }
 `
-const SCNavLink = styled(Link)`
+const SCNavLink = styled(NavLink)`
   text-decoration: none;
   color: black;
   font-weight: bolder;
+  font-size: .9rem;
+  transition: color .2s ease-in-out;
 
-  &:not(:last-child):after {
-    content: ' ··· ';
-    cursor: default;
+  &.active {
+    text-decoration: underline dotted;
   }
 
-  @media (max-width: 320px) {
-    display: block;
-    margin: 1rem 0;
+  &:hover {
+    color: #C7372F;
+  }
+`
+const SCLinkContainer = styled.div`
 
-    &:not(:last-child):after {
-      content: '';
-      cursor: default;
-    }
+`
+const SCRightWing = styled.div`
+  background: url(${wingSpritePath}) no-repeat -3px -325px;
+  background-size: 339px 366px;
+  width: 58px;
+  height: 41px;
+  transform: scale(.5);
+
+  @media (max-width: 425px) {
+    display: none;
+  }
+`
+const SCLeftWing = styled.div`
+  background: url(${wingSpritePath}) no-repeat -3px -325px;
+  background-size: 339px 366px;
+  width: 58px;
+  height: 41px;
+  transform: scale(-.5, .5);
+  @media (max-width: 425px) {
+    display: none;
   }
 `
 
 const Navigation = () => {
     return (<SCNavigationContainer>
+        <SCLeftWing/>
         {
             links.map(({text, path}, key) => {
-                return (<SCNavLink to={path} key={key}>{text}</SCNavLink>)
+                return (<SCLinkContainer><SCNavLink to={path} key={key}>{text}</SCNavLink></SCLinkContainer>)
             })
         }
+        <SCRightWing/>
     </SCNavigationContainer>)
 }
 

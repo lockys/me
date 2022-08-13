@@ -17,7 +17,7 @@ const ExpTitle = styled.h4`
 `
 const Exp = () => {
     return (<div>
-        <SCTitle>skills</SCTitle>
+        <SCTitle>Skills</SCTitle>
         <ExpRow>
             <ExpContext>
                 <ExpTitle>
@@ -34,7 +34,7 @@ const Exp = () => {
                 </ExpContext>
             </ExpContext>
         </ExpRow>
-        <SCTitle>work experiences</SCTitle>
+        <SCTitle>Work Experiences</SCTitle>
         <ExpRow>
             <SCRoundImage
                 src="https://media-exp1.licdn.com/dms/image/C4D0BAQEaBXOgNiu3sg/company-logo_100_100/0/1531757731989?e=1667433600&v=beta&t=3kqC6Mn06KyOf_GUf-Y-sVNf-h77DcsMG0iK77DlTag"/>
@@ -61,7 +61,7 @@ const Exp = () => {
                 </ExpContext>
             </ExpContext>
         </ExpRow>
-        <SCTitle>education</SCTitle>
+        <SCTitle>Education</SCTitle>
         <ExpRow>
             <SCRoundImage
                 src="https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo"/>
