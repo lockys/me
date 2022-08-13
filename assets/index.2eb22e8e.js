@@ -127,24 +127,25 @@ Error generating stack: `+o.message+`
   @media (max-width: 425px) {
     display: none;
   }
-`,iv=()=>ie(tv,{children:[L(ov,{}),ev.map(({text:e,path:t},n)=>L(rv,{children:L(nv,{to:t,children:e},n)})),L(lv,{})]}),uv=le.div`
+`,iv=()=>ie(tv,{children:[L(ov,{}),ev.map(({text:e,path:t},n)=>L(rv,{children:L(nv,{to:t,children:e},n)})),L(lv,{})]}),uv="/assets/portfolio-photo.5711ea8f.png",av=le.div`
   display: flex;
   gap: 1rem;
-`,av=le.img`
+`,sv=le.img`
   width: 33%;
   border: .3rem solid #eee;
-  filter: grayscale(100%);
-  transition: filter .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
   border-radius: 0 0 0 5px;
+  background-color: lightgrey;
+  cursor: pointer;
 
   &:hover {
-    filter: none;
+    background-color: white;
   }
 
   @media (max-width: 768px) {
     display: none;
   }
-`,sv=le.div`
+`,cv=le.div`
   font-weight: lighter;
   border: .3rem solid #eee;
   color: #f9f9f9;
@@ -157,7 +158,7 @@ Error generating stack: `+o.message+`
   line-height: 1.5rem;
   font-size: .8rem;
   hyphens: auto;
-`,cv=()=>ie(uv,{children:[L(av,{src:"https://avatars.githubusercontent.com/u/3911469?v=4"}),ie(sv,{children:["Hello world! This is Calvin Hao-Wei Jeng, a software developer based in Taiwan.",L("br",{}),L("br",{}),"-> I currently work for DBS Bank as a front-end developer. ",L("br",{}),"-> I write some JavaScript, CSS and HTML. ",L("br",{}),L("br",{})," I got my BS and MS degree in Computer Science from National Tsing Hua university."]})]}),sr=le.div`
+`,fv=()=>ie(av,{children:[L(sv,{src:uv}),ie(cv,{children:["Hello world! This is Calvin Hao-Wei Jeng, a software developer based in Taiwan.",L("br",{}),L("br",{}),"-> I currently work for DBS Bank as a front-end developer. ",L("br",{}),"-> I write some JavaScript, CSS and HTML. ",L("br",{}),L("br",{})," I got my BS and MS degree in Computer Science from National Tsing Hua university."]})]}),sr=le.div`
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -167,7 +168,7 @@ Error generating stack: `+o.message+`
   line-height: 1.2rem;
 `,xn=le.h4`
   font-weight: bolder;
-`,fv=()=>ie("div",{children:[L(ki,{children:"Skills"}),L(sr,{children:ie(ut,{children:[L(xn,{children:"Technical skills"}),L(ut,{children:"JavaScript, React.js, CSS, HTML"}),L(xn,{children:"Languages"}),L(ut,{children:"Chinese(Native), English(Fair)"})]})}),L(ki,{children:"Work Experiences"}),ie(sr,{children:[L(vl,{src:"https://media-exp1.licdn.com/dms/image/C4D0BAQEaBXOgNiu3sg/company-logo_100_100/0/1531757731989?e=1667433600&v=beta&t=3kqC6Mn06KyOf_GUf-Y-sVNf-h77DcsMG0iK77DlTag"}),ie(ut,{children:[L(xn,{children:"DBS Bank."}),ie(ut,{children:["Front-end developer, 2021/5 - PRESET, Taipei",L("br",{}),"Develop features for the Taiwan DBS internet banking website."]})]})]}),ie(sr,{children:[L(vl,{src:"https://media-exp1.licdn.com/dms/image/C4E0BAQFoH9k8ssM14Q/company-logo_100_100/0/1562340511062?e=1667433600&v=beta&t=CYxfc97wi2hQ9QAPoyDlT2lLYcb7uvbF-1YD71O_zZY"}),ie(ut,{children:[L(xn,{children:"Garmin corp."}),ie(ut,{children:["Software engineer, 2016/11 - 2020/5, New Taipei",L("br",{}),"mostly focus on implementations of back-end system"]})]})]}),L(ki,{children:"Education"}),ie(sr,{children:[L(vl,{src:"https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo"}),ie(ut,{children:[L(xn,{children:"National Tsing Hua university"}),L(ut,{children:"MS, 2014 - 2016, Hsinchu"})]})]}),ie(sr,{children:[L(vl,{src:"https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo"}),ie(ut,{children:[L(xn,{children:"National Tsing Hua university"}),L(ut,{children:"BS, 2010 - 2014, Hsinchu"})]})]})]}),dv=()=>ie("div",{children:["0 notes for now. ",L("br",{}),L("br",{}),L("img",{width:"100%",src:"https://media3.giphy.com/media/11ikeVaUfcXLWM/giphy.gif"})]}),pv=le.div`
+`,dv=()=>ie("div",{children:[L(ki,{children:"Skills"}),L(sr,{children:ie(ut,{children:[L(xn,{children:"Technical skills"}),L(ut,{children:"JavaScript, React.js, CSS, HTML"}),L(xn,{children:"Languages"}),L(ut,{children:"Chinese(Native), English(Fair)"})]})}),L(ki,{children:"Work Experiences"}),ie(sr,{children:[L(vl,{src:"https://media-exp1.licdn.com/dms/image/C4D0BAQEaBXOgNiu3sg/company-logo_100_100/0/1531757731989?e=1667433600&v=beta&t=3kqC6Mn06KyOf_GUf-Y-sVNf-h77DcsMG0iK77DlTag"}),ie(ut,{children:[L(xn,{children:"DBS Bank."}),ie(ut,{children:["Front-end developer, 2021/5 - PRESET, Taipei",L("br",{}),"Develop features for the Taiwan DBS internet banking website."]})]})]}),ie(sr,{children:[L(vl,{src:"https://media-exp1.licdn.com/dms/image/C4E0BAQFoH9k8ssM14Q/company-logo_100_100/0/1562340511062?e=1667433600&v=beta&t=CYxfc97wi2hQ9QAPoyDlT2lLYcb7uvbF-1YD71O_zZY"}),ie(ut,{children:[L(xn,{children:"Garmin corp."}),ie(ut,{children:["Software engineer, 2016/11 - 2020/5, New Taipei",L("br",{}),"mostly focus on implementations of back-end system"]})]})]}),L(ki,{children:"Education"}),ie(sr,{children:[L(vl,{src:"https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo"}),ie(ut,{children:[L(xn,{children:"National Tsing Hua university"}),L(ut,{children:"MS, 2014 - 2016, Hsinchu"})]})]}),ie(sr,{children:[L(vl,{src:"https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo"}),ie(ut,{children:[L(xn,{children:"National Tsing Hua university"}),L(ut,{children:"BS, 2010 - 2014, Hsinchu"})]})]})]}),pv=()=>ie("div",{children:["0 notes for now. ",L("br",{}),L("br",{}),L("img",{width:"100%",src:"https://media3.giphy.com/media/11ikeVaUfcXLWM/giphy.gif"})]}),hv=le.div`
   max-width: 768px;
   margin: 1rem auto;
   align-items: center;
@@ -177,7 +178,7 @@ Error generating stack: `+o.message+`
     margin: 0;
     border: none;
   }
-`,hv=le(b0)`
+`,mv=le(b0)`
   color: white;
   background-color: #08AEEA;
   background-image: linear-gradient(107deg, #08AEEA 0%, #2AF598 100%);
@@ -196,19 +197,19 @@ Error generating stack: `+o.message+`
   @media (max-width: 320px) {
     font-size: 2rem;
   }
-`,mv=le.div`
+`,vv=le.div`
   margin: 1rem;
 
   @media (max-width: 768px) {
     margin: 0;
   }
-`,vv=le.section`
+`,gv=le.section`
   margin: 1rem;
 
   @media (max-width: 320px) {
     margin: 0;
   }
-`,gv=le.footer`
+`,yv=le.footer`
   margin: 1rem;
   padding-top: 1rem;
   font-weight: bold;
@@ -220,7 +221,7 @@ Error generating stack: `+o.message+`
   &:hover {
     color: #C7372F;
   }
-`,yv=le.div`
+`,wv=le.div`
   float: right;
   font-size: 0.8rem;
 
@@ -228,7 +229,7 @@ Error generating stack: `+o.message+`
     float: none;
     padding: 1rem 0;
   }
-`,wv=le.section`
+`,Sv=le.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,10 +240,10 @@ Error generating stack: `+o.message+`
   @media (max-width: 320px) {
     flex-direction: column;
   }
-`,Sv=le.span`
+`,kv=le.span`
   font-family: 'dotted-font', 'Monoid', sans-serif;
   color: darkslategrey;
-`,kv=le.hr`
+`,xv=le.hr`
   line-height: 1em;
   position: relative;
   outline: 0;
@@ -271,7 +272,7 @@ Error generating stack: `+o.message+`
     color: black;
     background-color: white;
   }
-`,xv=i0`
+`,Cv=i0`
   from {
     height: 0;
   }
@@ -279,16 +280,16 @@ Error generating stack: `+o.message+`
   to {
     height: auto;
   }
-`,Cv=le.div`
+`,Ev=le.div`
   height: 0;
   overflow: hidden;
-  animation: ${xv} 1s linear infinite;
+  animation: ${Cv} 1s linear infinite;
   font-family: 'dotted-font', 'Monoid', sans-serif;
 
   @media (max-width: 320px) {
     display: none;
   }
-`;function Ev(){return ie(pv,{children:[L(mv,{children:L(hv,{children:"Calvin Jeng"})}),L(iv,{}),L(vv,{children:ie(A0,{children:[L($l,{exact:!0,path:"/",element:L(cv,{})}),L($l,{path:"/exp",element:L(fv,{})}),L($l,{path:"/note",element:L(dv,{})})]})}),ie(wv,{children:["\u{1F551} Taipei Time : UTC+8 = ",L(Sv,{children:((t,n)=>{let r=new Date,l=r.getTime()+r.getTimezoneOffset()*6e4,o=new Date(l+36e5*n);return`${o.getHours()}:${o.getMinutes().toLocaleString("en-US",{minimumIntegerDigits:2,useGrouping:!1})}`})("Taipei","+8")}),L(Cv,{children:"."})]}),L(kv,{className:"hr-text","data-content":"https://calvinjeng.me"}),ie(gv,{children:[L(xi,{href:"https://github.com/lockys",target:"_blank",children:L(Z0,{})}),L(xi,{href:"https://www.linkedin.com/in/calvinjeng/",target:"_blank",children:L(J0,{})}),L(xi,{href:"mailto:lockys.tw@gmail.com",target:"_blank",children:L(q0,{})}),ie(yv,{children:["\xA9 ",new Date().getFullYear()," Calvin Hao-Wei Jeng"]})]})]})}var Vd=globalThis&&globalThis.__makeTemplateObject||function(e,t){return Object.defineProperty?Object.defineProperty(e,"raw",{value:t}):e.raw=t,e},Qd=Ho(ic||(ic=Vd([`
+`;function _v(){return ie(hv,{children:[L(vv,{children:L(mv,{children:"Calvin Jeng"})}),L(iv,{}),L(gv,{children:ie(A0,{children:[L($l,{exact:!0,path:"/",element:L(fv,{})}),L($l,{path:"/exp",element:L(dv,{})}),L($l,{path:"/note",element:L(pv,{})})]})}),ie(Sv,{children:["\u{1F551} Taipei Time : UTC+8 = ",L(kv,{children:((t,n)=>{let r=new Date,l=r.getTime()+r.getTimezoneOffset()*6e4,o=new Date(l+36e5*n);return`${o.getHours()}:${o.getMinutes().toLocaleString("en-US",{minimumIntegerDigits:2,useGrouping:!1})}`})("Taipei","+8")}),L(Ev,{children:"."})]}),L(xv,{className:"hr-text","data-content":"https://calvinjeng.me"}),ie(yv,{children:[L(xi,{href:"https://github.com/lockys",target:"_blank",children:L(Z0,{})}),L(xi,{href:"https://www.linkedin.com/in/calvinjeng/",target:"_blank",children:L(J0,{})}),L(xi,{href:"mailto:lockys.tw@gmail.com",target:"_blank",children:L(q0,{})}),ie(wv,{children:["\xA9 ",new Date().getFullYear()," Calvin Hao-Wei Jeng"]})]})]})}var Vd=globalThis&&globalThis.__makeTemplateObject||function(e,t){return Object.defineProperty?Object.defineProperty(e,"raw",{value:t}):e.raw=t,e},Qd=Ho(ic||(ic=Vd([`
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.1 | 20191019
    License: none (public domain)
@@ -394,10 +395,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-`])));Ad(uc||(uc=Vd(["",""],["",""])),Qd);var ic,uc;const _v=Ad`
+`])));Ad(uc||(uc=Vd(["",""],["",""])),Qd);var ic,uc;const Pv=Ad`
   ${Qd}
   html {
     font-family: 'Monoid', sans-serif;
     height: 100vh;
   }
-`;Ci.createRoot(document.getElementById("root")).render(ie(Nt.StrictMode,{children:[L(_v,{}),L(j0,{children:L(Ev,{})})]}));
+`;Ci.createRoot(document.getElementById("root")).render(ie(Nt.StrictMode,{children:[L(Pv,{}),L(j0,{children:L(_v,{})})]}));
