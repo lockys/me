@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import portfolioPhoto from '../assets/portfolio-photo.png'
 
 const IntroContainer = styled.div`
   display: flex;
@@ -9,12 +10,13 @@ const IntroContainer = styled.div`
 const ProfileImage = styled.img`
   width: 33%;
   border: .3rem solid #eee;
-  filter: grayscale(100%);
-  transition: filter .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
   border-radius: 0 0 0 5px;
+  background-color: lightgrey;
+  cursor: pointer;
 
   &:hover {
-    filter: none;
+    background-color: white;
   }
 
   @media (max-width: 768px) {
@@ -39,7 +41,7 @@ const IntroContent = styled.div`
 const Intro = () => {
     return (
         <IntroContainer>
-            <ProfileImage src={'https://avatars.githubusercontent.com/u/3911469?v=4'}/>
+            <ProfileImage src={portfolioPhoto}/>
             <IntroContent>
                 Hello world! This is Calvin Hao-Wei Jeng, a software developer based in Taiwan.<br/><br/>
                 -> I currently work for DBS Bank as a front-end developer. <br/>
