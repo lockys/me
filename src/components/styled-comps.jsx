@@ -7,7 +7,7 @@ export const SCHeader = styled.h1`
 `
 
 export const SCTitle = styled.h3`
-  text-decoration: underline;
+  text-decoration: underline dotted;
   font-weight: bolder;
 `
 

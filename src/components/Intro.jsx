@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import portfolioPhoto from '../assets/portfolio-photo.png'
+import portfolioPhotoSayHi from '../assets/portfolio-say-hi.png'
 
 const IntroContainer = styled.div`
   display: flex;
@@ -12,11 +13,11 @@ const ProfileImage = styled.img`
   border: .3rem solid #eee;
   transition: background-color .3s ease-in-out;
   border-radius: 0 0 0 5px;
-  background-color: lightgrey;
+  background-color: #08AEEA;
   cursor: pointer;
 
   &:hover {
-    background-color: white;
+    background-color: #8BC6EC;
   }
 
   @media (max-width: 768px) {
@@ -28,7 +29,7 @@ const IntroContent = styled.div`
   border: .3rem solid #eee;
   color: #f9f9f9;
   background-color: #8BC6EC;
-  background-image: linear-gradient(135deg, #08AEEA 0%, #9599E2 100%);
+  background-image: linear-gradient(100deg, #08AEEA 0%, #2AF598 100%);
   border-radius: 0 0 5px 0;
 
   flex: 1;
@@ -39,9 +40,17 @@ const IntroContent = styled.div`
 `
 
 const Intro = () => {
+    const [portfolioImg, setPortfolioImage] = React.useState(portfolioPhoto)
     return (
         <IntroContainer>
-            <ProfileImage src={portfolioPhoto}/>
+            <ProfileImage src={portfolioImg}
+                          onMouseEnter={() => {
+                              setPortfolioImage(portfolioPhotoSayHi)
+                          }}
+                          onMouseOut={() => {
+                              setPortfolioImage(portfolioPhoto)
+                          }}
+            />
             <IntroContent>
                 Hello world! This is Calvin Hao-Wei Jeng, a software developer based in Taiwan.<br/><br/>
                 -> I currently work for DBS Bank as a front-end developer. <br/>
