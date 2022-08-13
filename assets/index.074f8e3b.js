@@ -158,7 +158,7 @@ Error generating stack: `+o.message+`
   line-height: 1.5rem;
   font-size: .8rem;
   hyphens: auto;
-`,dv=()=>{const[e,t]=St.useState(ic);return ie(sv,{children:[L(cv,{src:e,onMouseEnter:()=>{t(av)},onMouseOut:()=>{t(ic)}}),ie(fv,{children:["Hello world! This is Calvin Hao-Wei Jeng, a software developer based in Taiwan.",L("br",{}),L("br",{}),"-> I currently work for DBS Bank as a front-end developer. ",L("br",{}),"-> I write some JavaScript, CSS and HTML. ",L("br",{}),L("br",{})," I got my BS and MS degree in Computer Science from National Tsing Hua university."]})]})},sr=le.div`
+`,dv=()=>{const[e,t]=St.useState(ic);return ie(sv,{children:[L(cv,{src:e,onMouseEnter:()=>{t(av)},onMouseOut:()=>{t(ic)}}),ie(fv,{children:["Hello world! This is ",L("u",{children:"Calvin Hao-Wei Jeng"}),", a software developer based in Taiwan.",L("br",{}),L("br",{}),"-> I currently work for ",L("u",{children:"DBS Bank"})," as a front-end developer. ",L("br",{}),"-> I write some JavaScript, CSS and HTML. ",L("br",{}),L("br",{})," I got my BS and MS degree in ",L("u",{children:"Computer Science"})," from National Tsing Hua university."]})]})},sr=le.div`
   display: flex;
   align-items: center;
   gap: 1rem;
