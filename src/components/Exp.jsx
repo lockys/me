@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {SCRoundImage, SCTitle} from './styled-comps';
+import {SCRoundImage, SCTitle as _SCTitle} from './styled-comps';
 
 const ExpRow = styled.div`
   display: flex;
@@ -15,9 +15,19 @@ const ExpContext = styled.div`
 const ExpTitle = styled.h4`
   font-weight: bolder;
 `
+const SCExpContainer = styled.div`
+  @media (max-width: 768px) {
+    margin: 0 1rem;
+  }
+`
+const SCTitle = styled(_SCTitle)`
+  font-family: 'ndot-47', 'Monoid', sans-serif;
+  font-weight: normal;
+`
+
 const Exp = () => {
-    return (<div>
-        <SCTitle>Skills</SCTitle>
+    return (<SCExpContainer>
+        <SCTitle>SKILLS</SCTitle>
         <ExpRow>
             <ExpContext>
                 <ExpTitle>
@@ -34,7 +44,7 @@ const Exp = () => {
                 </ExpContext>
             </ExpContext>
         </ExpRow>
-        <SCTitle>Work Experiences</SCTitle>
+        <SCTitle>WORK EXPERIENCES</SCTitle>
         <ExpRow>
             <SCRoundImage
                 src="https://media-exp1.licdn.com/dms/image/C4D0BAQEaBXOgNiu3sg/company-logo_100_100/0/1531757731989?e=1667433600&v=beta&t=3kqC6Mn06KyOf_GUf-Y-sVNf-h77DcsMG0iK77DlTag"/>
@@ -61,7 +71,7 @@ const Exp = () => {
                 </ExpContext>
             </ExpContext>
         </ExpRow>
-        <SCTitle>Education</SCTitle>
+        <SCTitle>EDUCATION</SCTitle>
         <ExpRow>
             <SCRoundImage
                 src="https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo"/>
@@ -86,7 +96,7 @@ const Exp = () => {
                 </ExpContext>
             </ExpContext>
         </ExpRow>
-    </div>)
+    </SCExpContainer>)
 }
 
 export default Exp

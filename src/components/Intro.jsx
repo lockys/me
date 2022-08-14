@@ -6,13 +6,17 @@ import portfolioPhotoSayHi from '../assets/portfolio-say-hi.png'
 const IntroContainer = styled.div`
   display: flex;
   gap: 1rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const ProfileImage = styled.img`
   width: 33%;
   border: .3rem solid #eee;
   transition: background-color .3s ease-in-out;
-  border-radius: 0 0 0 5px;
+  border-radius: 5px;
   background-color: #08AEEA;
   cursor: pointer;
 
@@ -21,7 +25,8 @@ const ProfileImage = styled.img`
   }
 
   @media (max-width: 768px) {
-    display: none;
+    width: 25%;
+    border-radius: 50%;
   }
 `
 const IntroContent = styled.div`
@@ -30,7 +35,7 @@ const IntroContent = styled.div`
   color: #f9f9f9;
   background-color: #8BC6EC;
   background-image: linear-gradient(100deg, #08AEEA 0%, #2AF598 100%);
-  border-radius: 0 0 5px 0;
+  border-radius: 5px;
 
   flex: 1;
   padding: 1rem;
@@ -38,12 +43,21 @@ const IntroContent = styled.div`
   font-size: .8rem;
   hyphens: auto;
 `
+const SCUnderLine = styled.span`
+  text-decoration: underline dotted;
+  font-family: 'ndot-47', 'Monoid', sans-serif;
+
+  &:hover {
+    text-decoration: none;
+  }
+`
 
 const Intro = () => {
     const [portfolioImg, setPortfolioImage] = React.useState(portfolioPhoto)
     return (
         <IntroContainer>
             <ProfileImage src={portfolioImg}
+                          alt={'Portfolio image of Calvin Jeng'}
                           onMouseEnter={() => {
                               setPortfolioImage(portfolioPhotoSayHi)
                           }}
@@ -52,10 +66,11 @@ const Intro = () => {
                           }}
             />
             <IntroContent>
-                Hello world! This is <u>Calvin Hao-Wei Jeng</u>, a software developer based in Taiwan.<br/><br/>
-                -> I currently work for <u>DBS Bank</u> as a front-end developer. <br/>
+                Hello world! This is <SCUnderLine>Calvin Hao-Wei Jeng</SCUnderLine>, a software developer based in
+                Taiwan. <SCUnderLine>@lockys</SCUnderLine> on Github.<br/><br/>
+                -> I currently work for <SCUnderLine>DBS Bank</SCUnderLine> as a front-end developer. <br/>
                 -> I write some JavaScript, CSS and HTML. <br/><br/> I got my BS
-                and MS degree in <u>Computer Science</u> from National Tsing Hua university.
+                and MS degree in <SCUnderLine>Computer Science</SCUnderLine> from National Tsing Hua university.
             </IntroContent>
         </IntroContainer>
     )

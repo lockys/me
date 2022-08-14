@@ -1,23 +1,31 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Portfolio from './Portfolio.jsx'
-import {createGlobalStyle} from 'styled-components'
+import Portfolio from './Portfolio'
+import {createGlobalStyle, ThemeProvider} from 'styled-components'
 import reset from 'styled-reset'
 import {BrowserRouter} from 'react-router-dom'
+import {lightTheme, darkTheme} from "./theme"
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
   html {
     font-family: 'Monoid', sans-serif;
     height: 100vh;
+    transition: background .5s ease-in-out;
+    background: ${({theme}) => theme.background};
   }
 `
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <GlobalStyle/>
-        <BrowserRouter>
-            <Portfolio/>
-        </BrowserRouter>
-    </React.StrictMode>
-)
+const Main = () => {
+    const [isDark, setIsDark] = React.useState(localStorage.getItem('__isDark') === 'true')
+    return (<React.StrictMode>
+        <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+            <GlobalStyle/>
+            <BrowserRouter>
+                <Portfolio setIsDark={setIsDark} isDark={isDark}/>
+            </BrowserRouter>
+        </ThemeProvider>
+
+    </React.StrictMode>)
+}
+
+export default Main

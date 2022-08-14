@@ -30,13 +30,14 @@ const SCNavigationContainer = styled.nav`
 `
 const SCNavLink = styled(NavLink)`
   text-decoration: none;
-  color: black;
+  color: ${({theme}) => theme.textColor};
   font-weight: bolder;
   font-size: .9rem;
   transition: color .2s ease-in-out;
 
   &.active {
     text-decoration: underline dotted;
+    color: #C7372F;
   }
 
   &:hover {
@@ -52,6 +53,8 @@ const SCRightWing = styled.div`
   width: 58px;
   height: 41px;
   transform: scale(.5);
+  filter: ${({theme}) => theme.wingFilter};;
+  transition: filter .5s ease-in-out;
 
   @media (max-width: 425px) {
     display: none;
@@ -63,6 +66,9 @@ const SCLeftWing = styled.div`
   width: 58px;
   height: 41px;
   transform: scale(-.5, .5);
+  filter: ${({theme}) => theme.wingFilter};;
+  transition: filter .5s ease-in-out;
+
   @media (max-width: 425px) {
     display: none;
   }
@@ -73,7 +79,7 @@ const Navigation = () => {
         <SCLeftWing/>
         {
             links.map(({text, path}, key) => {
-                return (<SCLinkContainer><SCNavLink to={path} key={key}>{text}</SCNavLink></SCLinkContainer>)
+                return (<SCLinkContainer key={key}><SCNavLink to={path}>{text}</SCNavLink></SCLinkContainer>)
             })
         }
         <SCRightWing/>

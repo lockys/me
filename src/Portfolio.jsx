@@ -1,13 +1,15 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Link} from 'react-router-dom'
 import {FiGithub, FiLinkedin, FiMail} from 'react-icons/fi';
+import {MdDarkMode, MdLightMode} from 'react-icons/md';
 
 import {SCHeader} from './components/styled-comps'
 import Navigation from './components/Navigation'
 import Intro from './components/Intro'
 import Exp from './components/Exp';
 import Note from './components/Note';
+import Kudos from './components/Kudos';
 
 const PortfolioContainer = styled.div`
   max-width: 768px;
@@ -15,6 +17,7 @@ const PortfolioContainer = styled.div`
   align-items: center;
   border: 1px dotted lightgrey;
   border-radius: 5px;
+  color: ${({theme}) => theme.textColor};
   @media (max-width: 768px) {
     margin: 0;
     border: none;
@@ -22,6 +25,7 @@ const PortfolioContainer = styled.div`
 `
 
 const SCTitle = styled(SCHeader)`
+  font-family: 'ndot-47', 'Monoid', sans-serif;
   color: white;
   background-color: #08AEEA;
   background-image: linear-gradient(107deg, #08AEEA 0%, #2AF598 100%);
@@ -29,7 +33,7 @@ const SCTitle = styled(SCHeader)`
   text-align: center;
   padding: .5rem;
   cursor: pointer;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
 
   &:hover {
     border: 1rem solid black;
@@ -51,7 +55,7 @@ const Header = styled.div`
 const ContentSection = styled.section`
   margin: 1rem;
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     margin: 0;
   }
 `
@@ -62,7 +66,7 @@ const Footer = styled.footer`
 `
 const SCFooterLink = styled.a`
   padding: 0.2rem;
-  color: black;
+  color: ${({theme}) => theme.textColor};
   transition: color .3s ease-in-out;
 
   &:hover {
@@ -79,6 +83,7 @@ const SiteInfo = styled.div`
   }
 `
 const SCTimeSection = styled.section`
+  font-family: 'ndot-47', 'Monoid', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,8 +97,7 @@ const SCTimeSection = styled.section`
 `
 
 const SCTimeSpan = styled.span`
-  font-family: 'dotted-font', 'Monoid', sans-serif;
-  color: darkslategrey;
+  color: #C7372F;
 `
 
 const SCHr = styled.hr`
@@ -101,14 +105,14 @@ const SCHr = styled.hr`
   position: relative;
   outline: 0;
   border: 0;
-  color: black;
+  color: ${({theme}) => theme.textColor};
   text-align: center;
   height: 1.5em;
   opacity: .5;
 
   &:before {
     content: '';
-    background: linear-gradient(to right, transparent, black, transparent);
+    background: linear-gradient(to right, transparent, ${({theme}) => theme.textColor}, transparent);
     position: absolute;
     left: 0;
     top: 50%;
@@ -122,8 +126,9 @@ const SCHr = styled.hr`
     display: inline-block;
     padding: 0 .5em;
     line-height: 1.5em;
-    color: black;
-    background-color: white;
+    color: ${({theme}) => theme.textColor};
+    background-color: ${({theme}) => theme.background};
+    transition: background .5s ease-in-out;
   }
 `
 
@@ -140,15 +145,26 @@ const splash = keyframes`
 const SCAnimatedDot = styled.div`
   height: 0;
   overflow: hidden;
+  color: #C7372F;
   animation: ${splash} 1s linear infinite;
-  font-family: 'dotted-font', 'Monoid', sans-serif;
 
   @media (max-width: 320px) {
     display: none;
   }
 `
 
-function Portfolio() {
+const SCCopyRightLink = styled(Link)`
+  color: ${({theme}) => theme.textColor};
+  text-decoration: none;
+`
+const SCModeContainer = styled.div`
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 1rem;
+  vertical-align: middle;
+`
+
+function Portfolio({setIsDark, isDark}) {
     const calcTime = (city, offset) => {
         let d = new Date();
         let utc = d.getTime() + (d.getTimezoneOffset() * 60000);
@@ -162,7 +178,7 @@ function Portfolio() {
     return (
         <PortfolioContainer>
             <Header>
-                <SCTitle>calvinjeng.</SCTitle>
+                <SCTitle>CALVINJENG.</SCTitle>
             </Header>
             <Navigation/>
             <ContentSection>
@@ -170,6 +186,7 @@ function Portfolio() {
                     <Route exact path="/" element={<Intro/>}/>
                     <Route path="/exp" element={<Exp/>}/>
                     <Route path="/note" element={<Note/>}/>
+                    <Route path="/kudos" element={<Kudos/>}/>
                 </Routes>
             </ContentSection>
             <SCTimeSection>
@@ -188,7 +205,14 @@ function Portfolio() {
                     <FiMail/>
                 </SCFooterLink>
                 <SiteInfo>
-                    © {new Date().getFullYear()} Calvin Hao-Wei Jeng
+                    <SCCopyRightLink to={'/kudos'}>©</SCCopyRightLink> {new Date().getFullYear()} Calvin Hao-Wei Jeng
+                    {!isDark ? (<SCModeContainer onClick={() => {
+                        setIsDark(true);
+                        localStorage.setItem('__isDark', 'true');
+                    }}><MdDarkMode/></SCModeContainer>) : (<SCModeContainer onClick={() => {
+                        setIsDark(false);
+                        localStorage.setItem('__isDark', 'false');
+                    }}><MdLightMode/></SCModeContainer>)}
                 </SiteInfo>
             </Footer>
         </PortfolioContainer>
