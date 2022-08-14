@@ -439,4 +439,8 @@ table {
     transition: background .5s ease-in-out;
     background: ${({theme:e})=>e.background};
   }
+
+  a {
+    color: ${({theme:e})=>e.textColor};
+  }
 `,F1=()=>{const[e,t]=nt.useState(localStorage.getItem("__isDark")==="true");return _(nt.StrictMode,{children:te(c0,{theme:e?j1:M1,children:[_(D1,{}),_(W0,{children:_(I1,{setIsDark:t,isDark:e})})]})})};Pi.createRoot(document.getElementById("root")).render(_(F1,{}));
