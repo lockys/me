@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
     transition: background .5s ease-in-out;
     background: ${({theme}) => theme.background};
   }
+
+  a {
+    color: ${({theme}) => theme.textColor};
+  }
 `
 
 const Main = () => {
