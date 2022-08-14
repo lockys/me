@@ -3,7 +3,7 @@ import {SCTitle} from './styled-comps';
 
 const Kudos = () => {
     return (
-        <div>
+        <div style={{padding: '1rem'}}>
             <SCTitle>KUDOS 🙏</SCTitle>
             <br/>
             <section>

@@ -14,14 +14,14 @@ const IntroContainer = styled.div`
 
 const ProfileImage = styled.img`
   width: 33%;
-  border: .3rem solid #eee;
+  border: .3rem solid ${({theme}) => theme.border};
   transition: background-color .3s ease-in-out;
   border-radius: 5px;
-  background-color: #08AEEA;
+  background-color: #784BA0;
   cursor: pointer;
 
   &:hover {
-    background-color: #8BC6EC;
+    background-color: #2B86C5;
   }
 
   @media (max-width: 768px) {
@@ -31,10 +31,11 @@ const ProfileImage = styled.img`
 `
 const IntroContent = styled.div`
   font-weight: lighter;
-  border: .3rem solid #eee;
+  border: .3rem solid ${({theme}) => theme.border};
   color: #f9f9f9;
-  background-color: #8BC6EC;
-  background-image: linear-gradient(100deg, #08AEEA 0%, #2AF598 100%);
+  background-color: #FF3CAC;
+  background-image: linear-gradient(292deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
   border-radius: 5px;
 
   flex: 1;

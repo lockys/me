@@ -26,10 +26,10 @@ const PortfolioContainer = styled.div`
 
 const SCTitle = styled(SCHeader)`
   font-family: 'ndot-47', 'Monoid', sans-serif;
-  color: white;
-  background-color: #08AEEA;
-  background-image: linear-gradient(107deg, #08AEEA 0%, #2AF598 100%);
-  border: 1rem solid #eee;
+  color: #eee;
+  background-color: #FF3CAC;
+  background-image: linear-gradient(292deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+  border: 1rem solid ${({theme}) => theme.border};
   text-align: center;
   padding: .5rem;
   cursor: pointer;
