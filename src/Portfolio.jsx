@@ -13,9 +13,9 @@ import Kudos from './components/Kudos';
 
 const PortfolioContainer = styled.div`
   max-width: 768px;
-  margin: 1rem auto;
+  margin: 2rem auto;
   align-items: center;
-  border: 1px dotted lightgrey;
+  border: 1px dotted ${({theme}) => theme.containerBorder};
   border-radius: 5px;
   color: ${({theme}) => theme.textColor};
   @media (max-width: 768px) {
@@ -39,6 +39,10 @@ const SCTitle = styled(SCHeader)`
     border: 1rem solid black;
     color: black;
     background: #eee;
+  }
+
+  @media (max-width: 768px) {
+    border-radius: 0;
   }
 
   @media (max-width: 320px) {
@@ -193,7 +197,9 @@ function Portfolio({setIsDark, isDark}) {
                 🕑 Taipei Time : UTC+8
                 = <SCTimeSpan>{calcTime('Taipei', '+8')}</SCTimeSpan><SCAnimatedDot>.</SCAnimatedDot>
             </SCTimeSection>
-            <SCHr className="hr-text" data-content="https://calvinjeng.me"/>
+            <SCHr onClick={() => {
+
+            }} className="hr-text" data-content="https://calvinjeng.me"/>
             <Footer>
                 <SCFooterLink href="https://github.com/lockys" target="_blank">
                     <FiGithub/>

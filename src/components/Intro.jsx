@@ -14,6 +14,7 @@ const IntroContainer = styled.div`
 
 const ProfileImage = styled.img`
   width: 33%;
+  height: auto;
   border: .3rem solid ${({theme}) => theme.border};
   transition: background-color .3s ease-in-out;
   border-radius: 5px;
@@ -43,6 +44,10 @@ const IntroContent = styled.div`
   line-height: 1.5rem;
   font-size: .8rem;
   hyphens: auto;
+
+  @media (max-width: 768px) {
+    border-radius: 0;
+  }
 `
 const SCUnderLine = styled.span`
   text-decoration: underline dotted;

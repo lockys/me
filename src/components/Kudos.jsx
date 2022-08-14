@@ -1,10 +1,16 @@
 import React from 'react'
-import {SCTitle} from './styled-comps';
+import {SCTitle as _SCTitle} from './styled-comps';
+import styled from 'styled-components';
+
+const SCTitle = styled(_SCTitle)`
+  font-family: 'ndot-47', 'Monoid', sans-serif;
+  font-weight: normal;
+`
 
 const Kudos = () => {
     return (
         <div style={{padding: '1rem'}}>
-            <SCTitle>KUDOS 🙏</SCTitle>
+            <SCTitle>KUDOS</SCTitle>
             <br/>
             <section>
                 <ol>
