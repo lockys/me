@@ -1,5 +1,5 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Main from './main'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Main from './main';
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Main/>)
+ReactDOM.createRoot(document.getElementById('root')).render(<Main />);

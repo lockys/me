@@ -2,14 +2,20 @@
   "name": "calvinjeng",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build && cp 404.html dist && cp CNAME dist",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "lint:fix": "prettier --write src/**/*.js src/**/*.jsx",
+    "lint": "standard",
+    "start:server": "node ./src/apis/index.js"
   },
   "dependencies": {
+    "@hapi/hapi": "^20.2.2",
+    "async-redis": "^2.0.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
@@ -24,6 +30,8 @@
     "eslint": "^8.20.0",
     "eslint-plugin-react": "^7.30.1",
     "gh-pages": "^4.0.0",
+    "prettier": "^2.7.1",
+    "standard": "^17.0.0",
     "vite": "^3.0.2"
   }
 }
