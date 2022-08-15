@@ -121,7 +121,10 @@ const init = async () => {
   ];
 
   server.route(routes);
-
+  await server.register({
+    plugin: require('hapi-rate-limit'),
+    options: {},
+  });
   await server.start();
   console.log('Server running on %s', server.info.uri);
 };
