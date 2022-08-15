@@ -4,6 +4,7 @@ const Hapi = require('@hapi/hapi');
 require('dotenv').config();
 const redis = require('async-redis');
 const url = require('url');
+const numeral = require('numeral');
 
 let client;
 if (process.env.REDISCLOUD_URL) {
@@ -52,9 +53,9 @@ const init = async () => {
           let thumbsupCounts = await client.get('thumbsup:counts');
           let looksCounts = await client.get('looks:counts');
           let hiCounts = await client.get('hi:counts');
-          response.thumbsupCounts.counts = thumbsupCounts || 0;
-          response.looksCounts.counts = looksCounts || 0;
-          response.hiCounts.counts = hiCounts || 0;
+          response.thumbsupCounts.counts = numeral(thumbsupCounts || 0).format('0.0a');
+          response.looksCounts.counts = numeral(looksCounts || 0).format('0.0a');
+          response.hiCounts.counts = numeral(hi || 0).format('0.0a');
         } catch (e) {
           console.error(e);
         }
@@ -92,22 +93,22 @@ const init = async () => {
           let looksCounts = await client.get('looks:counts');
           let hiCounts = await client.get('hi:counts');
 
-          response.thumbsupCounts.counts = thumbsupCounts;
-          response.looksCounts.counts = looksCounts;
-          response.hiCounts.counts = hiCounts;
+          response.thumbsupCounts.counts = numeral(thumbsupCounts || 0).format('0.0a');
+          response.looksCounts.counts = numeral(looksCounts || 0).format('0.0a');
+          response.hiCounts.counts = numeral(hi || 0).format('0.0a');
 
           switch (emoji) {
             case 'thumbsupCounts':
-              response.thumbsupCounts.counts = parseInt(thumbsupCounts || 0) + 1;
-              await client.set('thumbsup:counts', response.thumbsupCounts.counts);
+              response.thumbsupCounts.counts = numeral(parseInt(thumbsupCounts || 0) + 1).format('0.0a');
+              await client.set('thumbsup:counts', response.thumbsupCounts.counts, 'EX', 60 * 60);
               break;
             case 'looksCounts':
-              response.looksCounts.counts = parseInt(looksCounts || 0) + 1;
-              await client.set('looks:counts', response.looksCounts.counts);
+              response.looksCounts.counts = numeral(parseInt(looksCounts || 0) + 1).format('0.0a');
+              await client.set('looks:counts', response.looksCounts.counts, 'EX', 60 * 60);
               break;
             case 'hiCounts':
-              response.hiCounts.counts = parseInt(hiCounts || 0) + 1;
-              await client.set('hi:counts', response.hiCounts.counts);
+              response.hiCounts.counts = numeral(parseInt(hiCounts || 0) + 1).format('0.0a');
+              await client.set('hi:counts', response.hiCounts.counts, 'EX', 60 * 60);
               break;
           }
         } catch (e) {

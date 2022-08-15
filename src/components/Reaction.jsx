@@ -61,7 +61,6 @@ const Reaction = () => {
             key={key}
             onClick={() => {
               sendEmoji(key);
-              console.log(counts);
             }}>
             {emoji}: {counts[key] ? counts[key].counts : 0}
           </SCEmojiButton>
