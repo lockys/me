@@ -35,11 +35,11 @@ const init = async () => {
       },
       handler: async (request, h) => {
         const response = {
-          smileCounts: {
+          thumbsupCounts: {
             counts: 0,
             isClicked: false,
           },
-          seeCounts: {
+          looksCounts: {
             counts: 0,
             isClicked: false,
           },
@@ -49,11 +49,11 @@ const init = async () => {
           },
         };
         try {
-          let smileCounts = await client.get('smiles:counts');
-          let seeCounts = await client.get('see:counts');
+          let thumbsupCounts = await client.get('thumbsup:counts');
+          let looksCounts = await client.get('looks:counts');
           let hiCounts = await client.get('hi:counts');
-          response.smileCounts.counts = smileCounts || 0;
-          response.seeCounts.counts = seeCounts || 0;
+          response.thumbsupCounts.counts = thumbsupCounts || 0;
+          response.looksCounts.counts = looksCounts || 0;
           response.hiCounts.counts = hiCounts || 0;
         } catch (e) {
           console.error(e);
@@ -70,8 +70,36 @@ const init = async () => {
           origin: [process.env.ALLOWED_CORS_DOMAIN],
         },
       },
-      handler: (request, h) => {
-        return {};
+      handler: async (request, h) => {
+        const response = {
+          thumbsupCounts: {
+            counts: 0,
+            isClicked: false,
+          },
+          looksCounts: {
+            counts: 0,
+            isClicked: false,
+          },
+          hiCounts: {
+            counts: 0,
+            isClicked: false,
+          },
+        };
+        try {
+          let thumbsupCounts = await client.get('thumbsup:counts');
+          let looksCounts = await client.get('looks:counts');
+          let hiCounts = await client.get('hi:counts');
+          response.thumbsupCounts.counts = thumbsupCounts + 1;
+          response.looksCounts.counts = looksCounts + 1;
+          response.hiCounts.counts = hiCounts + 1;
+          await client.set('thumbsup:counts', response.thumbsupCounts.counts);
+          await client.set('looks:counts', response.looksCounts.counts);
+          await client.set('hi:counts', response.hiCounts.counts);
+        } catch (e) {
+          console.error(e);
+        }
+
+        return response;
       },
     },
   ];

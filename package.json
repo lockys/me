@@ -12,6 +12,7 @@
     "start:server": "node ./src/apis/index.js"
   },
   "dependencies": {
+    "@hapi/cookie": "^11.0.2",
     "@hapi/hapi": "^20.2.2",
     "async-redis": "^2.0.0",
     "axios": "^0.27.2",

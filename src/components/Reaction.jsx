@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 
 const REACTION_LIST = [
   {
@@ -39,10 +40,31 @@ const SCEmojiButton = styled.button`
 `;
 
 const Reaction = () => {
+  const [counts, setCounts] = React.useState({});
+  React.useEffect(() => {
+    axios.get('https://apis.calvinjeng.me/emoji-counts').then(({ data }) => {
+      setCounts(data);
+    });
+  }, []);
+
+  const sendEmoji = (emoji) => {
+    axios.post(`https://apis.calvinjeng.me/send-emoji/${emoji}`).then(({ data }) => {
+      setCounts(data);
+    });
+  };
+
   return (
     <SCReactionContainer>
       {REACTION_LIST.map(({ emoji, key }) => {
-        return <SCEmojiButton key={key}>{emoji}: 0</SCEmojiButton>;
+        return (
+          <SCEmojiButton
+            key={key}
+            onClick={() => {
+              sendEmoji(key);
+            }}>
+            {emoji}: {counts[key] ? counts[key].counts : 0}
+          </SCEmojiButton>
+        );
       })}
     </SCReactionContainer>
   );
