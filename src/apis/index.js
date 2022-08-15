@@ -53,9 +53,9 @@ const init = async () => {
           let thumbsupCounts = await client.get('thumbsup:counts');
           let looksCounts = await client.get('looks:counts');
           let hiCounts = await client.get('hi:counts');
-          response.thumbsupCounts.counts = numeral(thumbsupCounts || 0).format('0.0a');
-          response.looksCounts.counts = numeral(looksCounts || 0).format('0.0a');
-          response.hiCounts.counts = numeral(hi || 0).format('0.0a');
+          response.thumbsupCounts.counts = numeral(thumbsupCounts || 0).format('0a');
+          response.looksCounts.counts = numeral(looksCounts || 0).format('0a');
+          response.hiCounts.counts = numeral(hiCounts || 0).format('0a');
         } catch (e) {
           console.error(e);
         }
@@ -93,21 +93,21 @@ const init = async () => {
           let looksCounts = await client.get('looks:counts');
           let hiCounts = await client.get('hi:counts');
 
-          response.thumbsupCounts.counts = numeral(thumbsupCounts || 0).format('0.0a');
-          response.looksCounts.counts = numeral(looksCounts || 0).format('0.0a');
-          response.hiCounts.counts = numeral(hi || 0).format('0.0a');
+          response.thumbsupCounts.counts = numeral(thumbsupCounts || 0).format('0a');
+          response.looksCounts.counts = numeral(looksCounts || 0).format('0a');
+          response.hiCounts.counts = numeral(hiCounts || 0).format('0a');
 
           switch (emoji) {
             case 'thumbsupCounts':
-              response.thumbsupCounts.counts = numeral(parseInt(thumbsupCounts || 0) + 1).format('0.0a');
+              response.thumbsupCounts.counts = numeral(parseInt(thumbsupCounts || 0) + 1).format('0a');
               await client.set('thumbsup:counts', response.thumbsupCounts.counts, 'EX', 60 * 60);
               break;
             case 'looksCounts':
-              response.looksCounts.counts = numeral(parseInt(looksCounts || 0) + 1).format('0.0a');
+              response.looksCounts.counts = numeral(parseInt(looksCounts || 0) + 1).format('0a');
               await client.set('looks:counts', response.looksCounts.counts, 'EX', 60 * 60);
               break;
             case 'hiCounts':
-              response.hiCounts.counts = numeral(parseInt(hiCounts || 0) + 1).format('0.0a');
+              response.hiCounts.counts = numeral(parseInt(hiCounts || 0) + 1).format('0a');
               await client.set('hi:counts', response.hiCounts.counts, 'EX', 60 * 60);
               break;
           }
