@@ -33,8 +33,33 @@ const init = async () => {
           origin: [process.env.ALLOWED_CORS_DOMAIN],
         },
       },
-      handler: (request, h) => {
-        return {};
+      handler: async (request, h) => {
+        const response = {
+          smileCounts: {
+            counts: 0,
+            isClicked: false,
+          },
+          seeCounts: {
+            counts: 0,
+            isClicked: false,
+          },
+          hiCounts: {
+            counts: 0,
+            isClicked: false,
+          },
+        };
+        try {
+          let smileCounts = await client.get('smiles:counts');
+          let seeCounts = await client.get('see:counts');
+          let hiCounts = await client.get('hi:counts');
+          response.smileCounts.counts = smileCounts || 0;
+          response.seeCounts.counts = seeCounts || 0;
+          response.hiCounts.counts = hiCounts || 0;
+        } catch (e) {
+          console.error(e);
+        }
+
+        return response;
       },
     },
     {
