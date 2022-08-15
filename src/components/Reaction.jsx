@@ -62,7 +62,7 @@ const Reaction = () => {
             onClick={() => {
               sendEmoji(key);
             }}>
-            {emoji}: {counts[key] ? counts[key].counts : 0}
+            {emoji}: {counts[key] ? counts[key].counts : '--'}
           </SCEmojiButton>
         );
       })}
