@@ -71,6 +71,8 @@ const init = async () => {
         },
       },
       handler: async (request, h) => {
+        const { emoji } = request.params;
+
         const response = {
           thumbsupCounts: {
             counts: 0,
@@ -89,12 +91,21 @@ const init = async () => {
           let thumbsupCounts = await client.get('thumbsup:counts');
           let looksCounts = await client.get('looks:counts');
           let hiCounts = await client.get('hi:counts');
-          response.thumbsupCounts.counts = thumbsupCounts + 1;
-          response.looksCounts.counts = looksCounts + 1;
-          response.hiCounts.counts = hiCounts + 1;
-          await client.set('thumbsup:counts', response.thumbsupCounts.counts);
-          await client.set('looks:counts', response.looksCounts.counts);
-          await client.set('hi:counts', response.hiCounts.counts);
+
+          switch (emoji) {
+            case 'thumbsupCounts':
+              response.thumbsupCounts.counts = parseInt(thumbsupCounts) + 1;
+              await client.set('thumbsup:counts', response.thumbsupCounts.counts);
+              break;
+            case 'looksCounts':
+              response.looksCounts.counts = parseInt(looksCounts) + 1;
+              await client.set('looks:counts', response.looksCounts.counts);
+              break;
+            case 'hiCounts':
+              response.hiCounts.counts = parseInt(hiCounts) + 1;
+              await client.set('hi:counts', response.hiCounts.counts);
+              break;
+          }
         } catch (e) {
           console.error(e);
         }

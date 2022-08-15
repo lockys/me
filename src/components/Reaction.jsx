@@ -5,15 +5,15 @@ import axios from 'axios';
 const REACTION_LIST = [
   {
     emoji: '👍',
-    key: 'thumbsup',
+    key: 'thumbsupCounts',
   },
   {
     emoji: '👀',
-    key: 'looks',
+    key: 'looksCounts',
   },
   {
     emoji: '👋',
-    key: 'hi',
+    key: 'hiCounts',
   },
 ];
 
@@ -61,6 +61,7 @@ const Reaction = () => {
             key={key}
             onClick={() => {
               sendEmoji(key);
+              console.log(counts);
             }}>
             {emoji}: {counts[key] ? counts[key].counts : 0}
           </SCEmojiButton>
