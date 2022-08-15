@@ -220,7 +220,7 @@ Error generating stack: `+o.message+`
   &:hover {
     border: 1px solid #c7372f;
   }
-`,sy=()=>{const[e,t]=Ke.useState({});Ke.useEffect(()=>{xf.get("https://apis.calvinjeng.me/emoji-counts").then(({data:r})=>{t(r)})},[]);const n=r=>{xf.post(`https://apis.calvinjeng.me/send-emoji/${r}`).then(({data:i})=>{t(i)})};return _(uy,{children:ly.map(({emoji:r,key:i})=>ne(ay,{onClick:()=>{n(i)},children:[r,": ",e[i]?e[i].counts:0]},i))})},cy=Y.div`
+`,sy=()=>{const[e,t]=Ke.useState({});Ke.useEffect(()=>{xf.get("https://apis.calvinjeng.me/emoji-counts").then(({data:r})=>{t(r)})},[]);const n=r=>{xf.post(`https://apis.calvinjeng.me/send-emoji/${r}`).then(({data:i})=>{t(i)})};return _(uy,{children:ly.map(({emoji:r,key:i})=>ne(ay,{onClick:()=>{n(i)},children:[r,": ",e[i]?e[i].counts:"--"]},i))})},cy=Y.div`
   max-width: 768px;
   margin: 2rem auto;
   align-items: center;
