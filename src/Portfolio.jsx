@@ -26,7 +26,7 @@ const PortfolioContainer = styled.div`
 `;
 
 const SCTitle = styled(SCHeader)`
-  font-family: 'ndot-47', 'Monoid', sans-serif;
+  font-family: 'ndot-47', 'Lato-Regular', sans-serif;
   color: #eee;
   background-color: #ff3cac;
   background-image: linear-gradient(292deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
@@ -88,7 +88,7 @@ const SiteInfo = styled.div`
   }
 `;
 const SCTimeSection = styled.section`
-  font-family: 'ndot-47', 'Monoid', sans-serif;
+  font-family: 'ndot-47', 'Lato-Regular', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;

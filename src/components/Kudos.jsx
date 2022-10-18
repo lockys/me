@@ -3,7 +3,7 @@ import { SCTitle as _SCTitle } from './styled-comps';
 import styled from 'styled-components';
 
 const SCTitle = styled(_SCTitle)`
-  font-family: 'ndot-47', 'Monoid', sans-serif;
+  font-family: 'ndot-47', 'Lato-Regular', sans-serif;
   font-weight: normal;
 `;
 

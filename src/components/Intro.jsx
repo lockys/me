@@ -51,7 +51,7 @@ const IntroContent = styled.div`
 `;
 const SCUnderLine = styled.span`
   text-decoration: underline dotted;
-  font-family: 'ndot-47', 'Monoid', sans-serif;
+  font-family: 'ndot-47', 'Lato-Regular', sans-serif;
 
   &:hover {
     text-decoration: none;

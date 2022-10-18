@@ -23,7 +23,7 @@ const SCReactionContainer = styled.div`
   gap: 1rem;
 `;
 const SCEmojiButton = styled.button`
-  font-family: 'ndot-47', 'Monoid', sans-serif;
+  font-family: 'ndot-47', 'Lato-Regular', sans-serif;
   border: 1px solid ${({ theme }) => theme.border};
   background: transparent;
   border-radius: 5px;

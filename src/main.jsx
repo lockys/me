@@ -8,7 +8,7 @@ import { lightTheme, darkTheme } from './theme';
 const GlobalStyle = createGlobalStyle`
   ${reset}
   html {
-    font-family: 'Monoid', sans-serif;
+    font-family: 'Lato-Regular', sans-serif;
     height: 100vh;
     transition: background .5s ease-in-out;
     background: ${({ theme }) => theme.background};
