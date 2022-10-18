@@ -465,7 +465,7 @@ table {
 `])));Zp(_f||(_f=Rh(["",""],["",""])),Nh);var Ef,_f;const Ey={textColor:"black",background:"white",wingFilter:"none",border:"#eee",containerBorder:"#A2AAAD"},_y={textColor:"white",background:"#162c35",wingFilter:"brightness(0) invert(1)",border:"#A2AAAD",containerBorder:"#eee"},Py=Zp`
   ${Nh}
   html {
-    font-family: 'monoid', sans-serif;
+    font-family: 'Lato', 'Monoid', sans-serif;
     height: 100vh;
     transition: background .5s ease-in-out;
     background: ${({theme:e})=>e.background};
