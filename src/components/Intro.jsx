@@ -31,7 +31,6 @@ const ProfileImage = styled.img`
   }
 `;
 const IntroContent = styled.div`
-  font-weight: lighter;
   border: 0.3rem solid ${({ theme }) => theme.border};
   color: #f9f9f9;
   background-color: #ff3cac;
@@ -42,7 +41,7 @@ const IntroContent = styled.div`
   flex: 1;
   padding: 1rem;
   line-height: 1.5rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   hyphens: auto;
 
   @media (max-width: 768px) {

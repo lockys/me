@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
   ${reset}
   html {
     font-family: 'Lato-Regular', sans-serif;
-    height: 100vh;
     transition: background .5s ease-in-out;
     background: ${({ theme }) => theme.background};
   }
