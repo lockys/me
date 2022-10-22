@@ -156,7 +156,6 @@ Error generating stack: `+o.message+`
     border-radius: 50%;
   }
 `,G1=Y.div`
-  font-weight: lighter;
   border: 0.3rem solid ${({theme:e})=>e.border};
   color: #f9f9f9;
   background-color: #ff3cac;
@@ -167,7 +166,7 @@ Error generating stack: `+o.message+`
   flex: 1;
   padding: 1rem;
   line-height: 1.5rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   hyphens: auto;
 
   @media (max-width: 768px) {
@@ -466,7 +465,6 @@ table {
   ${Nh}
   html {
     font-family: 'Lato-Regular', sans-serif;
-    height: 100vh;
     transition: background .5s ease-in-out;
     background: ${({theme:e})=>e.background};
   }
