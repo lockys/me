@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SCRoundImage, SCTitle as _SCTitle } from './styled-comps';
+import nthuUrl from '../assets/nthu.jfif';
+import garminUrl from '../assets/garmin.jfif';
+import dbsUrl from '../assets/dbs.jfif';
 
 const ExpRow = styled.div`
   display: flex;
@@ -39,7 +42,7 @@ const Exp = () => {
       </ExpRow>
       <SCTitle>WORK EXPERIENCES</SCTitle>
       <ExpRow>
-        <SCRoundImage src="https://media-exp1.licdn.com/dms/image/C4D0BAQEaBXOgNiu3sg/company-logo_100_100/0/1531757731989?e=1667433600&v=beta&t=3kqC6Mn06KyOf_GUf-Y-sVNf-h77DcsMG0iK77DlTag" />
+        <SCRoundImage src={dbsUrl} />
         <ExpContext>
           <ExpTitle>DBS Bank.</ExpTitle>
           <ExpContext>
@@ -50,7 +53,7 @@ const Exp = () => {
         </ExpContext>
       </ExpRow>
       <ExpRow>
-        <SCRoundImage src="https://media-exp1.licdn.com/dms/image/C4E0BAQFoH9k8ssM14Q/company-logo_100_100/0/1562340511062?e=1667433600&v=beta&t=CYxfc97wi2hQ9QAPoyDlT2lLYcb7uvbF-1YD71O_zZY" />
+        <SCRoundImage src={garminUrl} />
         <ExpContext>
           <ExpTitle>Garmin corp.</ExpTitle>
           <ExpContext>
@@ -62,14 +65,14 @@ const Exp = () => {
       </ExpRow>
       <SCTitle>EDUCATION</SCTitle>
       <ExpRow>
-        <SCRoundImage src="https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo" />
+        <SCRoundImage src={nthuUrl} />
         <ExpContext>
           <ExpTitle>National Tsing Hua university</ExpTitle>
           <ExpContext>MS, 2014 - 2016, Hsinchu</ExpContext>
         </ExpContext>
       </ExpRow>
       <ExpRow>
-        <SCRoundImage src="https://media-exp1.licdn.com/dms/image/C560BAQGT4WA5vJdeCQ/company-logo_100_100/0/1519856847096?e=1667433600&v=beta&t=lhoY8R_yZdZQcB0RVmCdkYH_JJ44uqJkRK5HrYE4COo" />
+        <SCRoundImage src={nthuUrl} />
         <ExpContext>
           <ExpTitle>National Tsing Hua university</ExpTitle>
           <ExpContext>BS, 2010 - 2014, Hsinchu</ExpContext>
