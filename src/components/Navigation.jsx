@@ -5,11 +5,11 @@ import wingSpritePath from '../assets/wing-sprite.png';
 
 const links = [
   {
-    text: '👋INTRO.',
+    text: '(I)ntro',
     path: '/',
   },
   {
-    text: '💻EXPERIENCES.',
+    text: '(E)xperiences',
     path: '/exp',
   }
 ];
@@ -36,7 +36,7 @@ const SCNavLink = styled(NavLink)`
   }
 
   &:hover {
-    color: #c7372f;
+    text-decoration: underline dotted;
   }
 `;
 const SCLinkContainer = styled.div``;

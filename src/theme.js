@@ -1,5 +1,5 @@
 export const lightTheme = {
-  textColor: 'black',
+  textColor: '#2A4D4C',
   background: '#fffbf8',
   wingFilter: 'none',
   border: '#eee',

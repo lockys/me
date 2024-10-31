@@ -32,7 +32,7 @@ const ProfileImage = styled.img`
 `;
 const IntroContent = styled.div`
   border: 0.3rem solid ${({ theme }) => theme.border};
-  color: #2A4D4C;
+  color: ${({ theme }) => theme.textColor};
   background-color: #E2FFF2;
 
   border-radius: 5px;
@@ -68,8 +68,8 @@ const Intro = () => {
         Hello world! This is <SCUnderLine>Calvin Hao-Wei Jeng</SCUnderLine>, a software developer based in Taiwan. <SCUnderLine>@lockys</SCUnderLine> on Github.
         <br />
         <br />
-        -> I currently work for <SCUnderLine>DBS Bank</SCUnderLine> as a front-end developer. <br />
-        -> I write some JavaScript, CSS and HTML. <br />
+        - I currently work for <SCUnderLine>DBS Bank</SCUnderLine> as a front-end developer. <br />
+        - I write some JavaScript, CSS and HTML. <br />
         <br /> I got my BS and MS degree in <SCUnderLine>Computer Science</SCUnderLine> from National Tsing Hua university.
       </IntroContent>
     </IntroContainer>

@@ -10,7 +10,13 @@ import Intro from './components/Intro';
 import Exp from './components/Exp';
 import Note from './components/Note';
 import Kudos from './components/Kudos';
-import Reaction from './components/Reaction';
+import inpgif from './assets/88x31/i-np.gif';
+import applec from './assets/88x31/apple_computer.gif';
+import apple from './assets/88x31/apple.gif';
+import apache from './assets/88x31/arachne2.gif';
+import msnotepad from './assets/88x31/msnotepad.gif';
+
+const gifList = [inpgif, applec, apple, apache, msnotepad];
 
 const PortfolioContainer = styled.div`
   max-width: 768px;
@@ -150,7 +156,17 @@ const SCModeContainer = styled.div`
   margin-left: 1rem;
   vertical-align: middle;
 `;
-const SCReactionSection = styled.div``;
+
+const SCReactionSection = styled.div`
+  display: flex;
+  justify-content: end;
+  margin: 1rem;
+`;
+
+const SCGif = styled.img`
+  border: 1px solid ${({ theme }) => theme.border};
+  cursor: pointer;
+`;
 
 function Portfolio({ setIsDark, isDark }) {
   const calcTime = (city, offset) => {
@@ -163,10 +179,12 @@ function Portfolio({ setIsDark, isDark }) {
     })}`;
   };
 
+  const [gif, setGif] = React.useState(gifList[0]);
+
   return (
     <PortfolioContainer>
       <Header>
-        <SCTitle>i dont what to put here...</SCTitle>
+        <SCTitle>i dont what to put here yet...</SCTitle>
       </Header>
       <Navigation />
       <ContentSection>
@@ -182,7 +200,7 @@ function Portfolio({ setIsDark, isDark }) {
         <SCAnimatedDot>.</SCAnimatedDot>
       </SCTimeSection>
       <SCReactionSection>
-        <Reaction />
+        <SCGif src={gif} onClick={() => setGif(gifList[Math.floor(Math.random() * gifList.length)])} alt="gif" />
       </SCReactionSection>
       <SCHr onClick={() => {}} className="hr-text" data-content="https://calvinjeng.me" />
       <Footer>
