@@ -18,11 +18,11 @@ const ProfileImage = styled.img`
   border: 0.3rem solid ${({ theme }) => theme.border};
   transition: background-color 0.3s ease-in-out;
   border-radius: 5px;
-  background-color: #784ba0;
+  background-color: #E2FFF2;
   cursor: pointer;
 
   &:hover {
-    background-color: #2b86c5;
+    background-color: #F0FFF7;
   }
 
   @media (max-width: 768px) {
@@ -32,9 +32,8 @@ const ProfileImage = styled.img`
 `;
 const IntroContent = styled.div`
   border: 0.3rem solid ${({ theme }) => theme.border};
-  color: #f9f9f9;
-  background-color: #ff3cac;
-  background-image: linear-gradient(292deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+  color: #2A4D4C;
+  background-color: #E2FFF2;
 
   border-radius: 5px;
 

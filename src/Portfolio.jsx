@@ -28,18 +28,9 @@ const PortfolioContainer = styled.div`
 const SCTitle = styled(SCHeader)`
   font-family: 'Lato-Regular', sans-serif;
   color: ${({ theme }) => theme.textColor};
-  text-align: center;
+  text-align: right;
   padding: 0.5rem;
-  cursor: pointer;
-  border-radius: 5px;
-
-  @media (max-width: 768px) {
-    border-radius: 0;
-  }
-
-  @media (max-width: 320px) {
-    font-size: 2rem;
-  }
+  font-size: 0.8rem;
 `;
 const Header = styled.div`
   margin: 1rem;
@@ -175,7 +166,7 @@ function Portfolio({ setIsDark, isDark }) {
   return (
     <PortfolioContainer>
       <Header>
-        <SCTitle>Hi!</SCTitle>
+        <SCTitle>i dont what to put here...</SCTitle>
       </Header>
       <Navigation />
       <ContentSection>
