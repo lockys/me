@@ -15,7 +15,6 @@ const IntroContainer = styled.div`
 const ProfileImage = styled.img`
   width: 33%;
   height: auto;
-  border: 0.3rem solid ${({ theme }) => theme.border};
   transition: background-color 0.3s ease-in-out;
   border-radius: 5px;
   background-color: #E2FFF2;
@@ -31,7 +30,6 @@ const ProfileImage = styled.img`
   }
 `;
 const IntroContent = styled.div`
-  border: 0.3rem solid ${({ theme }) => theme.border};
   color: ${({ theme }) => theme.textColor};
   background-color: #E2FFF2;
 
