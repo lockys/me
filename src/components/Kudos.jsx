@@ -3,14 +3,14 @@ import { SCTitle as _SCTitle } from './styled-comps';
 import styled from 'styled-components';
 
 const SCTitle = styled(_SCTitle)`
-  font-family: 'ndot-47', 'Lato-Regular', sans-serif;
+  font-family: 'Lato-Regular', sans-serif;
   font-weight: normal;
 `;
 
 const Kudos = () => {
   return (
     <div style={{ padding: '1rem' }}>
-      <SCTitle>KUDOS</SCTitle>
+      <SCTitle>(K)udos</SCTitle>
       <br />
       <section>
         <ol>
@@ -30,10 +30,16 @@ const Kudos = () => {
               shutterstock
             </a>
           </li>
+          <li>
+            - Good old school gif is from{' '}
+            <a target={'_blank'} href={'https://cyber.dabamos.de/88x31/index.html'} rel="noreferrer">
+              cyber.dabamos.de
+            </a>
+          </li>
         </ol>
       </section>
       <br />
-      <SCTitle>LICENSE</SCTitle>
+      <SCTitle>(L)icense</SCTitle>
       <br />
       This portfolio page is released under{' '}
       <a href={'https://github.com/lockys/me/blob/master/license'} target={'_blank'} rel="noreferrer">

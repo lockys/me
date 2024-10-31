@@ -48,6 +48,7 @@ const SCRightWing = styled.div`
   transform: scale(0.5);
   filter: ${({ theme }) => theme.wingFilter};
   transition: filter 0.5s ease-in-out;
+  opacity: 0.3;
 
   @media (max-width: 425px) {
     display: none;
@@ -61,6 +62,7 @@ const SCLeftWing = styled.div`
   transform: scale(-0.5, 0.5);
   filter: ${({ theme }) => theme.wingFilter};
   transition: filter 0.5s ease-in-out;
+  opacity: 0.3;
 
   @media (max-width: 425px) {
     display: none;

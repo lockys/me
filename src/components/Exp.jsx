@@ -24,14 +24,14 @@ const SCExpContainer = styled.div`
   }
 `;
 const SCTitle = styled(_SCTitle)`
-  font-family: 'ndot-47', 'Lato-Regular', sans-serif;
+  font-family: 'Lato-Regular', sans-serif;
   font-weight: normal;
 `;
 
 const Exp = () => {
   return (
     <SCExpContainer>
-      <SCTitle>SKILLS</SCTitle>
+      <SCTitle>(S)kills</SCTitle>
       <ExpRow>
         <ExpContext>
           <ExpTitle>Technical skills</ExpTitle>
@@ -40,7 +40,7 @@ const Exp = () => {
           <ExpContext>Chinese(Native), English(Fair)</ExpContext>
         </ExpContext>
       </ExpRow>
-      <SCTitle>WORK EXPERIENCES</SCTitle>
+      <SCTitle>(W)ork experiences</SCTitle>
       <ExpRow>
         <SCRoundImage src={dbsUrl} />
         <ExpContext>
@@ -63,7 +63,7 @@ const Exp = () => {
           </ExpContext>
         </ExpContext>
       </ExpRow>
-      <SCTitle>EDUCATION</SCTitle>
+      <SCTitle>(E)ducation</SCTitle>
       <ExpRow>
         <SCRoundImage src={nthuUrl} />
         <ExpContext>
