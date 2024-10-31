@@ -64,12 +64,6 @@ const Intro = () => {
       <ProfileImage
         src={portfolioImg}
         alt={'Portfolio image of Calvin Jeng'}
-        onMouseEnter={() => {
-          setPortfolioImage(portfolioPhotoSayHi);
-        }}
-        onMouseOut={() => {
-          setPortfolioImage(portfolioPhoto);
-        }}
       />
       <IntroContent>
         Hello world! This is <SCUnderLine>Calvin Hao-Wei Jeng</SCUnderLine>, a software developer based in Taiwan. <SCUnderLine>@lockys</SCUnderLine> on Github.

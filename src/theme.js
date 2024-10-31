@@ -1,6 +1,6 @@
 export const lightTheme = {
   textColor: 'black',
-  background: 'white',
+  background: '#FFFFFF',
   wingFilter: 'none',
   border: '#eee',
   containerBorder: '#A2AAAD',

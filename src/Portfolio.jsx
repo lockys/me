@@ -16,9 +16,9 @@ const PortfolioContainer = styled.div`
   max-width: 768px;
   margin: 2rem auto;
   align-items: center;
-  border: 1px dotted ${({ theme }) => theme.containerBorder};
   border-radius: 5px;
   color: ${({ theme }) => theme.textColor};
+    
   @media (max-width: 768px) {
     margin: 0;
     border: none;
@@ -26,21 +26,12 @@ const PortfolioContainer = styled.div`
 `;
 
 const SCTitle = styled(SCHeader)`
-  font-family: 'ndot-47', 'Lato-Regular', sans-serif;
-  color: #eee;
-  background-color: #ff3cac;
-  background-image: linear-gradient(292deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
-  border: 1rem solid ${({ theme }) => theme.border};
+  font-family: 'Lato-Regular', sans-serif;
+  color: ${({ theme }) => theme.textColor};
   text-align: center;
   padding: 0.5rem;
   cursor: pointer;
   border-radius: 5px;
-
-  &:hover {
-    border: 1rem solid black;
-    color: black;
-    background: #eee;
-  }
 
   @media (max-width: 768px) {
     border-radius: 0;
@@ -184,7 +175,7 @@ function Portfolio({ setIsDark, isDark }) {
   return (
     <PortfolioContainer>
       <Header>
-        <SCTitle>CALVINJENG.</SCTitle>
+        <SCTitle>Hi!</SCTitle>
       </Header>
       <Navigation />
       <ContentSection>

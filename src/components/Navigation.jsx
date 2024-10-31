@@ -11,11 +11,7 @@ const links = [
   {
     text: '💻EXPERIENCES.',
     path: '/exp',
-  },
-  {
-    text: '📒NOTE.',
-    path: '/note',
-  },
+  }
 ];
 
 const SCNavigationContainer = styled.nav`
@@ -37,7 +33,6 @@ const SCNavLink = styled(NavLink)`
 
   &.active {
     text-decoration: underline dotted;
-    color: #c7372f;
   }
 
   &:hover {
