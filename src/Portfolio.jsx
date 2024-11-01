@@ -184,7 +184,7 @@ function Portfolio({ setIsDark, isDark }) {
   return (
     <PortfolioContainer>
       <Header>
-        <SCTitle>i dont what to put here yet...</SCTitle>
+        <SCTitle>i dont know what to put here yet...</SCTitle>
       </Header>
       <Navigation />
       <ContentSection>
