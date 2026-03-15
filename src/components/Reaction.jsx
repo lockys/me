@@ -32,6 +32,7 @@ const SCEmojiButton = styled.button`
   height: 2rem;
   font-size: 1rem;
   vertical-align: middle;
+  transition: border-color 0.2s ease-in-out;
 
   &:hover {
     border: 1px solid ${({ theme }) => theme.accentColor};

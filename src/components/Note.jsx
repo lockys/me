@@ -1,12 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const NoteContainer = styled.div`
+  text-align: center;
+`;
+
+const NoteImage = styled.img`
+  border-radius: 5px;
+  width: 100%;
+`;
 
 const Note = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <NoteContainer>
       Notes are still building. <br />
       <br />
-      <img style={{ borderRadius: '5px' }} width="100%" src="https://media3.giphy.com/media/11ikeVaUfcXLWM/giphy.gif" />
-    </div>
+      <NoteImage src="https://media3.giphy.com/media/11ikeVaUfcXLWM/giphy.gif" />
+    </NoteContainer>
   );
 };
 

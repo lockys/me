@@ -16,13 +16,15 @@ const IntroContainer = styled.div`
 const ProfileImage = styled.img`
   width: 33%;
   height: auto;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
   border-radius: 5px;
   background-color: ${({ theme }) => theme.highlightBg};
   cursor: pointer;
+  filter: grayscale(100%);
 
   &:hover {
     background-color: ${({ theme }) => theme.highlightBgHover};
+    filter: grayscale(0%);
   }
 
   @media (max-width: 768px) {
@@ -33,6 +35,7 @@ const ProfileImage = styled.img`
 const IntroContent = styled.div`
   color: ${({ theme }) => theme.textColor};
   background-color: ${({ theme }) => theme.highlightBg};
+  transition: background-color 0.3s ease-in-out;
   position: relative;
 
   border-radius: 5px;
@@ -58,9 +61,9 @@ const SCUnderLine = styled.span`
 `;
 const SCLangToggle = styled.button`
   font-family: 'ndot-47', 'Lato-Regular', sans-serif;
-  border: 1px solid ${({ theme }) => theme.border};
   background: transparent;
   color: ${({ theme }) => theme.textColor};
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.8rem;
@@ -68,6 +71,10 @@ const SCLangToggle = styled.button`
   position: absolute;
   right: 0.5rem;
   bottom: 0.5rem;
+
+  &:hover {
+    text-decoration: underline dotted;
+  }
 `;
 
 const Intro = () => {
@@ -94,7 +101,7 @@ const Intro = () => {
         {t.work}<SCUnderLine>{t.company}</SCUnderLine>{t.workRole} <br />
         {t.skills} <br />
         <br /> {t.education}<SCUnderLine>{t.degree}</SCUnderLine>{t.educationFrom}
-        <SCLangToggle onClick={toggleLang}>{lang === 'en' ? '中' : '英'}</SCLangToggle>
+        <SCLangToggle onClick={toggleLang}>{lang === 'en' ? '中' : 'EN'}</SCLangToggle>
       </IntroContent>
     </IntroContainer>
   );

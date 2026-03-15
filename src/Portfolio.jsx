@@ -156,6 +156,10 @@ const SCModeContainer = styled.div`
   display: inline-block;
   margin-left: 1rem;
   vertical-align: middle;
+
+  &:hover {
+    text-decoration: underline dotted;
+  }
 `;
 
 const SCReactionSection = styled.div`
@@ -167,6 +171,13 @@ const SCReactionSection = styled.div`
 const SCGif = styled.img`
   border: 1px solid ${({ theme }) => theme.border};
   cursor: pointer;
+`;
+
+const SCBadge = styled.img`
+  margin-left: 0.5rem;
+  height: 31px;
+  filter: ${({ theme }) => theme.wingFilter};
+  transition: filter 0.5s ease-in-out;
 `;
 
 function Portfolio({ setIsDark, isDark }) {
@@ -203,7 +214,7 @@ function Portfolio({ setIsDark, isDark }) {
       <SCReactionSection>
         <SCGif src={gif} onClick={() => setGif(gifList[Math.floor(Math.random() * gifList.length)])} alt="gif" />
         <a href="https://notbyai.fyi" target="_blank" rel="noreferrer">
-          <img src={designedByHumanBadge} alt="Designed by Human, Not by AI" style={{ marginLeft: '0.5rem', height: '31px' }} />
+          <SCBadge src={designedByHumanBadge} alt="Designed by Human, Not by AI" />
         </a>
       </SCReactionSection>
       <SCHr onClick={() => {}} className="hr-text" data-content="https://calvinjeng.me" />
