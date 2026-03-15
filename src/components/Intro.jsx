@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import portfolioPhoto from '../assets/portfolio-photo.png';
 import portfolioPhotoSayHi from '../assets/portfolio-say-hi.png';
+import { introText } from './intro-i18n';
 
 const IntroContainer = styled.div`
   display: flex;
@@ -17,11 +18,11 @@ const ProfileImage = styled.img`
   height: auto;
   transition: background-color 0.3s ease-in-out;
   border-radius: 5px;
-  background-color: #E2FFF2;
+  background-color: ${({ theme }) => theme.highlightBg};
   cursor: pointer;
 
   &:hover {
-    background-color: #F0FFF7;
+    background-color: ${({ theme }) => theme.highlightBgHover};
   }
 
   @media (max-width: 768px) {
@@ -31,12 +32,14 @@ const ProfileImage = styled.img`
 `;
 const IntroContent = styled.div`
   color: ${({ theme }) => theme.textColor};
-  background-color: #E2FFF2;
+  background-color: ${({ theme }) => theme.highlightBg};
+  position: relative;
 
   border-radius: 5px;
 
   flex: 1;
   padding: 1rem;
+  padding-bottom: 2rem;
   line-height: 1.5rem;
   font-size: 0.9rem;
   hyphens: auto;
@@ -53,9 +56,31 @@ const SCUnderLine = styled.span`
     text-decoration: none;
   }
 `;
+const SCLangToggle = styled.button`
+  font-family: 'ndot-47', 'Lato-Regular', sans-serif;
+  border: 1px solid ${({ theme }) => theme.border};
+  background: transparent;
+  color: ${({ theme }) => theme.textColor};
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.4rem;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+`;
 
 const Intro = () => {
   const [portfolioImg, setPortfolioImage] = React.useState(portfolioPhoto);
+  const [lang, setLang] = React.useState(() => localStorage.getItem('__lang') || 'en');
+  const t = introText[lang];
+
+  const toggleLang = () => {
+    const next = lang === 'en' ? 'zh' : 'en';
+    setLang(next);
+    localStorage.setItem('__lang', next);
+  };
+
   return (
     <IntroContainer>
       <ProfileImage
@@ -63,12 +88,13 @@ const Intro = () => {
         alt={'Portfolio image of Calvin Jeng'}
       />
       <IntroContent>
-        Hello world! This is <SCUnderLine>Calvin Hao-Wei Jeng</SCUnderLine>, a software developer based in Taiwan. <SCUnderLine>@lockys</SCUnderLine> on Github.
+        {t.greeting} <SCUnderLine>Calvin Hao-Wei Jeng</SCUnderLine>{t.description}<SCUnderLine>@lockys</SCUnderLine>{t.githubLabel}
         <br />
         <br />
-        - I currently work for <SCUnderLine>DBS Bank</SCUnderLine> as a front-end developer. <br />
-        - I write some JavaScript, CSS and HTML. <br />
-        <br /> I got my BS and MS degree in <SCUnderLine>Computer Science</SCUnderLine> from National Tsing Hua university.
+        {t.work}<SCUnderLine>{t.company}</SCUnderLine>{t.workRole} <br />
+        {t.skills} <br />
+        <br /> {t.education}<SCUnderLine>{t.degree}</SCUnderLine>{t.educationFrom}
+        <SCLangToggle onClick={toggleLang}>{lang === 'en' ? '中' : '英'}</SCLangToggle>
       </IntroContent>
     </IntroContainer>
   );

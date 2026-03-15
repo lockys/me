@@ -1,0 +1,26 @@
+export const introText = {
+  en: {
+    greeting: 'Hello world! This is ',
+    description: ', a software developer based in Taiwan. ',
+    githubLabel: ' on Github.',
+    work: '- I currently work for ',
+    company: 'DBS Bank',
+    workRole: ' as a front-end developer.',
+    skills: '- I write some JavaScript, CSS and HTML.',
+    education: 'I got my BS and MS degree in ',
+    degree: 'Computer Science',
+    educationFrom: ' from National Tsing Hua university.',
+  },
+  zh: {
+    greeting: '嗨！我是',
+    description: '，來自台灣的軟體工程師。在 Github 上是 ',
+    githubLabel: '',
+    work: '- 目前在',
+    company: '星展銀行',
+    workRole: '擔任前端工程師。',
+    skills: '- 主要撰寫 JavaScript、CSS 和 HTML。',
+    education: '畢業於國立清華大學',
+    degree: '資工系/資工所',
+    educationFrom: '',
+  },
+};

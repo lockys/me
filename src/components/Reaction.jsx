@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
 
 const REACTION_LIST = [
   {
@@ -35,7 +34,7 @@ const SCEmojiButton = styled.button`
   vertical-align: middle;
 
   &:hover {
-    border: 1px solid #c7372f;
+    border: 1px solid ${({ theme }) => theme.accentColor};
   }
 `;
 

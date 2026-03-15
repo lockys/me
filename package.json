@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && cp 404.html dist && cp CNAME dist",
-    "preview": "vite preview",
+    "dev": "rsbuild dev",
+    "build": "rsbuild build && cp 404.html dist && cp CNAME dist",
+    "preview": "rsbuild preview",
     "deploy": "gh-pages -d dist",
     "lint:fix": "prettier --write src/**/*.js src/**/*.jsx",
     "lint": "standard",
@@ -16,7 +16,6 @@
     "@hapi/cookie": "^11.0.2",
     "@hapi/hapi": "^20.2.2",
     "async-redis": "^2.0.0",
-    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
     "hapi-rate-limit": "^6.0.0",
     "numeral": "^2.0.6",
@@ -28,14 +27,12 @@
     "styled-reset": "^4.4.2"
   },
   "devDependencies": {
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.0.0",
+    "@rsbuild/core": "^1.7.3",
+    "@rsbuild/plugin-react": "^1.4.6",
     "eslint": "^8.20.0",
     "eslint-plugin-react": "^7.30.1",
     "gh-pages": "^4.0.0",
     "prettier": "^2.7.1",
-    "standard": "^17.0.0",
-    "vite": "^3.0.2"
+    "standard": "^17.0.0"
   }
 }

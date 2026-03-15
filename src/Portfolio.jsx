@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Routes, Route, Link } from 'react-router-dom';
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi';
-import { MdDarkMode, MdLightMode } from 'react-icons/md';
+
 
 import { SCHeader } from './components/styled-comps';
 import Navigation from './components/Navigation';
@@ -64,7 +64,7 @@ const SCFooterLink = styled.a`
   transition: color 0.3s ease-in-out;
 
   &:hover {
-    color: #c7372f;
+    color: ${({ theme }) => theme.accentColor};
   }
 `;
 const SiteInfo = styled.div`
@@ -91,7 +91,7 @@ const SCTimeSection = styled.section`
 `;
 
 const SCTimeSpan = styled.span`
-  color: #c7372f;
+  color: ${({ theme }) => theme.accentColor};
 `;
 
 const SCHr = styled.hr`
@@ -139,7 +139,7 @@ const splash = keyframes`
 const SCAnimatedDot = styled.div`
   height: 0;
   overflow: hidden;
-  color: #c7372f;
+  color: ${({ theme }) => theme.accentColor};
   animation: ${splash} 1s linear infinite;
 
   @media (max-width: 320px) {
@@ -219,23 +219,14 @@ function Portfolio({ setIsDark, isDark }) {
         </SCFooterLink>
         <SiteInfo>
           <SCCopyRightLink to={'/kudos'}>©</SCCopyRightLink> {new Date().getFullYear()} Calvin Hao-Wei Jeng
-          {!isDark ? (
-            <SCModeContainer
-              onClick={() => {
-                setIsDark(true);
-                localStorage.setItem('__isDark', 'true');
-              }}>
-              <MdDarkMode />
-            </SCModeContainer>
-          ) : (
-            <SCModeContainer
-              onClick={() => {
-                setIsDark(false);
-                localStorage.setItem('__isDark', 'false');
-              }}>
-              <MdLightMode />
-            </SCModeContainer>
-          )}
+          <SCModeContainer
+            onClick={() => {
+              const next = !isDark;
+              setIsDark(next);
+              localStorage.setItem('__isDark', String(next));
+            }}>
+            {isDark ? '明' : '暗'}
+          </SCModeContainer>
         </SiteInfo>
       </Footer>
     </PortfolioContainer>
