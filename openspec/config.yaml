@@ -1,0 +1,23 @@
+schema: spec-driven
+
+context: |
+  Project: Personal portfolio website (calvinjeng.me)
+  Tech stack: React 18, Rsbuild, Styled Components, React Router v6
+  Styling: CSS-in-JS via Styled Components with light/dark theme support
+  Deployment: GitHub Pages (static SPA) with optional Hapi.js + Redis backend
+  Language: JavaScript (no TypeScript)
+  Code style: Prettier (single quotes, semicolons, trailing commas, 200 char width)
+  Routes: / (Intro), /exp (Experience), /note (placeholder), /kudos (Credits)
+  State: React hooks + localStorage for theme persistence
+  No test framework configured
+  Verification: Chrome DevTools MCP available for browser-based debugging and visual verification (console logs, screenshots, DOM inspection, network analysis)
+
+rules:
+  proposal:
+    - Keep proposals concise and focused on one feature/change
+    - Include impact on existing routes and components
+  tasks:
+    - Break tasks into small, independently verifiable chunks
+    - Include which files need to be created or modified
+    - For UI verification tasks, use Chrome DevTools MCP to inspect the running app (screenshots, console, DOM)
+    - Run /simplify on changed code before each commit to review for reuse, quality, and efficiency
