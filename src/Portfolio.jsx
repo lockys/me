@@ -15,6 +15,7 @@ import applec from './assets/88x31/apple_computer.gif';
 import apple from './assets/88x31/apple.gif';
 import apache from './assets/88x31/arachne2.gif';
 import msnotepad from './assets/88x31/msnotepad.gif';
+import designedByHumanBadge from './assets/designed-by-human-badge.svg';
 
 const gifList = [inpgif, applec, apple, apache, msnotepad];
 
@@ -184,7 +185,7 @@ function Portfolio({ setIsDark, isDark }) {
   return (
     <PortfolioContainer>
       <Header>
-        <SCTitle>i dont know what to put here yet...</SCTitle>
+        <SCTitle>I dont know what to put here yet.</SCTitle>
       </Header>
       <Navigation />
       <ContentSection>
@@ -201,6 +202,9 @@ function Portfolio({ setIsDark, isDark }) {
       </SCTimeSection>
       <SCReactionSection>
         <SCGif src={gif} onClick={() => setGif(gifList[Math.floor(Math.random() * gifList.length)])} alt="gif" />
+        <a href="https://notbyai.fyi" target="_blank" rel="noreferrer">
+          <img src={designedByHumanBadge} alt="Designed by Human, Not by AI" style={{ marginLeft: '0.5rem', height: '31px' }} />
+        </a>
       </SCReactionSection>
       <SCHr onClick={() => {}} className="hr-text" data-content="https://calvinjeng.me" />
       <Footer>
