@@ -30,7 +30,7 @@ const SCTitle = styled(_SCTitle)`
 
 const Exp = () => {
   return (
-    <SCExpContainer>
+    <SCExpContainer data-testid="exp">
       <SCTitle>(S)kills</SCTitle>
       <ExpRow>
         <ExpContext>

@@ -1,7 +1,7 @@
 schema: spec-driven
 
 context: |
-  Project: Personal portfolio website (calvinjeng.me)
+  Project: Personal portfolio website (calvinjeng.io)
   Tech stack: React 18, Rsbuild, Styled Components, React Router v6
   Styling: CSS-in-JS via Styled Components with light/dark theme support
   Deployment: GitHub Pages (static SPA) with optional Hapi.js + Redis backend

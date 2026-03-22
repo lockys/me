@@ -41,10 +41,11 @@ const SCEmojiButton = styled.button`
 
 const Reaction = () => {
   return (
-    <SCReactionContainer>
+    <SCReactionContainer data-testid="reaction">
       {REACTION_LIST.map(({ emoji, key }) => {
         return (
           <SCEmojiButton
+            data-testid={`emoji-${key}`}
             key={key}
           >
             {emoji}

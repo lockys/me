@@ -28,8 +28,7 @@ const ProfileImage = styled.img`
   }
 
   @media (max-width: 768px) {
-    width: 25%;
-    border-radius: 50%;
+    display: none;
   }
 `;
 const IntroContent = styled.div`
@@ -89,19 +88,20 @@ const Intro = () => {
   };
 
   return (
-    <IntroContainer>
+    <IntroContainer data-testid="intro">
       <ProfileImage
+        data-testid="profile-image"
         src={portfolioImg}
         alt={'Portfolio image of Calvin Jeng'}
       />
-      <IntroContent>
+      <IntroContent data-testid="intro-content">
         {t.greeting} <SCUnderLine>Calvin Hao-Wei Jeng</SCUnderLine>{t.description}<SCUnderLine>@lockys</SCUnderLine>{t.githubLabel}
         <br />
         <br />
         {t.work}<SCUnderLine>{t.company}</SCUnderLine>{t.workRole} <br />
         {t.skills} <br />
         <br /> {t.education}<SCUnderLine>{t.degree}</SCUnderLine>{t.educationFrom}
-        <SCLangToggle onClick={toggleLang}>{lang === 'en' ? '中' : 'EN'}</SCLangToggle>
+        <SCLangToggle data-testid="lang-toggle" onClick={toggleLang}>{lang === 'en' ? '中' : 'EN'}</SCLangToggle>
       </IntroContent>
     </IntroContainer>
   );

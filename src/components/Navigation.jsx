@@ -21,7 +21,7 @@ const SCNavigationContainer = styled.nav`
   align-items: center;
   gap: 0.5rem;
   @media (max-width: 425px) {
-    flex-direction: column;
+    flex-direction: row;
   }
 `;
 const SCNavLink = styled(NavLink)`
@@ -38,6 +38,10 @@ const SCNavLink = styled(NavLink)`
   &:hover {
     text-decoration: underline dotted;
   }
+`;
+const SCDivider = styled.span`
+  color: ${({ theme }) => theme.textColor};
+  opacity: 0.3;
 `;
 const SCLinkContainer = styled.div``;
 const SCRightWing = styled.div`
@@ -71,16 +75,19 @@ const SCLeftWing = styled.div`
 
 const Navigation = () => {
   return (
-    <SCNavigationContainer>
-      <SCLeftWing />
-      {links.map(({ text, path }, key) => {
+    <SCNavigationContainer data-testid="navigation">
+      <SCLeftWing data-testid="wing-left" />
+      {links.map(({ text, path }, index) => {
         return (
-          <SCLinkContainer key={key}>
-            <SCNavLink to={path}>{text}</SCNavLink>
-          </SCLinkContainer>
+          <React.Fragment key={index}>
+            {index > 0 && <SCDivider>/</SCDivider>}
+            <SCLinkContainer>
+              <SCNavLink data-testid={`nav-link-${path.replace('/', '') || 'home'}`} to={path}>{text}</SCNavLink>
+            </SCLinkContainer>
+          </React.Fragment>
         );
       })}
-      <SCRightWing />
+      <SCRightWing data-testid="wing-right" />
     </SCNavigationContainer>
   );
 };

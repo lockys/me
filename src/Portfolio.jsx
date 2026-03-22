@@ -16,6 +16,7 @@ import apple from './assets/88x31/apple.gif';
 import apache from './assets/88x31/arachne2.gif';
 import msnotepad from './assets/88x31/msnotepad.gif';
 import designedByHumanBadge from './assets/designed-by-human-badge.svg';
+import profilePhoto from './assets/portfolio-photo.png';
 
 const gifList = [inpgif, applec, apple, apache, msnotepad];
 
@@ -38,6 +39,23 @@ const SCTitle = styled(SCHeader)`
   text-align: right;
   padding: 0.5rem;
   font-size: 0.8rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+const SCMobileAvatar = styled.img`
+  display: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+
+  @media (max-width: 768px) {
+    display: block;
+    margin: 1rem auto 0;
+  }
 `;
 const Header = styled.div`
   margin: 1rem;
@@ -194,12 +212,13 @@ function Portfolio({ setIsDark, isDark }) {
   const [gif, setGif] = React.useState(gifList[0]);
 
   return (
-    <PortfolioContainer>
-      <Header>
-        <SCTitle>I dont know what to put here yet.</SCTitle>
+    <PortfolioContainer data-testid="portfolio-container">
+      <Header data-testid="header">
+        <SCTitle data-testid="header-title">I dont know what to put here yet.</SCTitle>
+        <SCMobileAvatar data-testid="mobile-avatar" src={profilePhoto} alt="Calvin Jeng" />
       </Header>
       <Navigation />
-      <ContentSection>
+      <ContentSection data-testid="content-section">
         <Routes>
           <Route exact path="/" element={<Intro />} />
           <Route path="/exp" element={<Exp />} />
@@ -207,30 +226,31 @@ function Portfolio({ setIsDark, isDark }) {
           <Route path="/kudos" element={<Kudos />} />
         </Routes>
       </ContentSection>
-      <SCTimeSection>
-        🕑 Taipei Time : UTC+8 = <SCTimeSpan>{calcTime('Taipei', '+8')}</SCTimeSpan>
+      <SCTimeSection data-testid="time-section">
+        🕑 Taipei Time : UTC+8 = <SCTimeSpan data-testid="time-value">{calcTime('Taipei', '+8')}</SCTimeSpan>
         <SCAnimatedDot>.</SCAnimatedDot>
       </SCTimeSection>
-      <SCReactionSection>
-        <SCGif src={gif} onClick={() => setGif(gifList[Math.floor(Math.random() * gifList.length)])} alt="gif" />
+      <SCReactionSection data-testid="reaction-section">
+        <SCGif data-testid="random-gif" src={gif} onClick={() => setGif(gifList[Math.floor(Math.random() * gifList.length)])} alt="gif" />
         <a href="https://notbyai.fyi" target="_blank" rel="noreferrer">
-          <SCBadge src={designedByHumanBadge} alt="Designed by Human, Not by AI" />
+          <SCBadge data-testid="not-by-ai-badge" src={designedByHumanBadge} alt="Designed by Human, Not by AI" />
         </a>
       </SCReactionSection>
-      <SCHr onClick={() => {}} className="hr-text" data-content="https://calvinjeng.me" />
-      <Footer>
-        <SCFooterLink href="https://github.com/lockys" target="_blank">
+      <SCHr data-testid="site-divider" onClick={() => {}} className="hr-text" data-content="https://calvinjeng.io" />
+      <Footer data-testid="footer">
+        <SCFooterLink data-testid="link-github" href="https://github.com/lockys" target="_blank">
           <FiGithub />
         </SCFooterLink>
-        <SCFooterLink href="https://www.linkedin.com/in/calvinjeng/" target="_blank">
+        <SCFooterLink data-testid="link-linkedin" href="https://www.linkedin.com/in/calvinjeng/" target="_blank">
           <FiLinkedin />
         </SCFooterLink>
-        <SCFooterLink href="mailto:lockys.tw@gmail.com" target="_blank">
+        <SCFooterLink data-testid="link-email" href="mailto:lockys.tw@gmail.com" target="_blank">
           <FiMail />
         </SCFooterLink>
-        <SiteInfo>
+        <SiteInfo data-testid="site-info">
           <SCCopyRightLink to={'/kudos'}>©</SCCopyRightLink> {new Date().getFullYear()} Calvin Hao-Wei Jeng
           <SCModeContainer
+            data-testid="theme-toggle"
             onClick={() => {
               const next = !isDark;
               setIsDark(next);

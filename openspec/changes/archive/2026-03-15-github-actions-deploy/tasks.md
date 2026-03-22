@@ -8,4 +8,4 @@
 
 - [x] 2.1 Push to master and confirm the workflow runs successfully in the GitHub Actions tab
 - [x] 2.2 Verify `gh-pages` branch is updated with build output including `404.html` and `CNAME`
-- [x] 2.3 Confirm the deployed site loads correctly at calvinjeng.me
+- [x] 2.3 Confirm the deployed site loads correctly at calvinjeng.io

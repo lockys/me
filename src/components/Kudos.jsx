@@ -9,7 +9,7 @@ const SCTitle = styled(_SCTitle)`
 
 const Kudos = () => {
   return (
-    <div style={{ padding: '1rem' }}>
+    <div data-testid="kudos" style={{ padding: '1rem' }}>
       <SCTitle>(K)udos</SCTitle>
       <br />
       <section>

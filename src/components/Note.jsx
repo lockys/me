@@ -12,10 +12,10 @@ const NoteImage = styled.img`
 
 const Note = () => {
   return (
-    <NoteContainer>
+    <NoteContainer data-testid="note">
       Notes are still building. <br />
       <br />
-      <NoteImage src="https://media3.giphy.com/media/11ikeVaUfcXLWM/giphy.gif" />
+      <NoteImage data-testid="note-image" src="https://media3.giphy.com/media/11ikeVaUfcXLWM/giphy.gif" />
     </NoteContainer>
   );
 };
